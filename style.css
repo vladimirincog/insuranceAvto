@@ -1,0 +1,12 @@
+.container {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+.item {
+  min-height: 500px;
+  width: 100%;
+  background-image: url(img/header.jpg) no-repeat;
+  background-size: cover;
+}
