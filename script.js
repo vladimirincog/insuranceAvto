@@ -1,20 +1,21 @@
 
-let navItem = document.getElementsByClassName("item-nav");
-let navPoint = document.getElementsByClassName("navPoint");
-navPoint.style.display = 'none';
-window.addEventListener('resize', function () {
-    if (1200 > document.body.clientWidth) {
-        for (let i = 1; i <= navItem.length; i++) {
-            navItem[i].style.display = 'none';
-        }
-       
-        
-    }
-    else {
-        for (let i = 1; i <= navItem.length; i++) {
-            navItem[i].style.display = 'block';
-        }
-        
-    }
+let navItem = document.getElementsByClassName('item-nav');              //Элементы меню
+let navOpenButton = document.getElementsByClassName('navOpenButton');   //Стрелка открытия меню
+let navCloseButton = document.getElementsByClassName('navCloseButton'); //Стрелка закрытия меню
+navCloseButton[0].style.display ='none';
 
-});
+function navOpenFun(){
+    navCloseButton[0].style.display = 'block';
+    navOpenButton[0].style.display = 'none';
+    for(let i=0; i<=navItem.length; i++){
+        navItem[i].style.display = 'block';
+    }
+}
+
+function navCloseFun(){
+    navCloseButton[0].style.display ='none';
+    navOpenButton[0].style.display ='block';
+    for(let i=0; i<=navItem.length; i++){
+        navItem[i].style.display = 'none';
+    }
+}
