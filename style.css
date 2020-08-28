@@ -1,3 +1,16 @@
+.container-header {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: space-between;
+  align-content: center;
+  background: black;
+}
+.logo, .telephon{
+  margin-left: 2%;
+  margin-right: 2%;
+}
+
 .container {
   display: flex;
   flex-flow: row wrap;
@@ -6,9 +19,9 @@
   align-content: center;
   background: black;
 }
-.navPoint {
+.navOpenButton, .navCloseButton {
   display: none;
-  margin-bottom: 15px;
+  margin: 15px;
 }
 @media (max-width: 1200px) {
   .container {
@@ -19,11 +32,16 @@
     align-content: center;
     background: black;
   }
-  .navPoint {
+  .navOpenButton, .navCloseButton {
     display: block;
     margin-bottom: 15px;
   }
+  .item-nav {
+    margin: 20px;
+    display: none;
+  }
 }
+
 .item-nav {
   margin: 20px;
 }
