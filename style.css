@@ -1,3 +1,13 @@
+body {
+  color: white;
+  font-weight: bold;
+}
+
+.logo, .telephon{
+  margin-left: 2%;
+  margin-right: 2%;
+}
+
 .container-header {
   display: flex;
   flex-flow: row wrap;
@@ -6,9 +16,11 @@
   align-content: center;
   background: black;
 }
-.logo, .telephon{
-  margin-left: 2%;
-  margin-right: 2%;
+
+.item-header {
+  width: 100%;
+  margin: 10px;
+  font-size: xx-large;
 }
 
 .container {
@@ -45,6 +57,7 @@
 .item-nav {
   margin: 20px;
 }
+
 .container-2 {
   display: flex;
   flex-flow: column nowrap;
@@ -57,13 +70,10 @@
   padding-bottom: 8%;
 }
 
-.item-header {
-  width: 100%;
-  margin: 10px;
-  font-size: xx-large;
+.container-3{
+  display: flex;
+  color: black;
+  flex-flow: column nowrap;
 }
 
-body {
-  color: white;
-  font-weight: bold;
-}
+
