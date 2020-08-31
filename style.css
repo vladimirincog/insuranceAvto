@@ -1,9 +1,11 @@
 body {
-  color: white;
+  color: black;
   font-weight: bold;
+  background-image: url(img/header.jpg);
 }
 
-.logo, .telephon{
+.logo,
+.telephon {
   margin-left: 2%;
   margin-right: 2%;
 }
@@ -14,7 +16,7 @@ body {
   align-items: center;
   justify-content: space-between;
   align-content: center;
-  background: black;
+  /*background: rgba(255,255, 255, 0.5);*/
 }
 
 .item-header {
@@ -29,9 +31,10 @@ body {
   justify-content: center;
   align-items: center;
   align-content: center;
-  background: black;
+  /*background: rgba(255,255, 255, 0.5);*/
 }
-.navOpenButton, .navCloseButton {
+.navOpenButton,
+.navCloseButton {
   display: none;
   margin: 15px;
 }
@@ -42,38 +45,44 @@ body {
     justify-content: center;
     align-items: center;
     align-content: center;
-    background: black;
+    /*background: rgba(255,255, 255, 0.5);*/
   }
-  .navOpenButton, .navCloseButton {
+  .navOpenButton,
+  .navCloseButton {
     display: block;
     margin-bottom: 15px;
   }
   .item-nav {
+    font-size: x-small;
     margin: 20px;
     display: none;
   }
 }
 
 .item-nav {
+  font-size: x-large;
   margin: 20px;
 }
 
-.container-2 {
+.container-main {
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
   align-content: center;
-  padding-left: 20%;
-  background-image: url(img/header.jpg);
-  padding-top: 5%;
-  padding-bottom: 8%;
 }
 
-.container-3{
+.services{
+  background: rgba(255,255, 255, 0.5);
+}
+
+.form-action{
+  background: rgba(255,255, 255, 0.5);
+}
+
+.container-footer {
   display: flex;
   color: black;
-  flex-flow: column nowrap;
+  flex-flow: row wrap;
 }
-
 
