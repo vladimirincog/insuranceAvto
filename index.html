@@ -38,31 +38,140 @@
                 <br> По минимальной ставке по всей РФ
                 <br> БЕЗ РАЗЪЕЗДОВ И ОЧЕРЕДЕЙ
             </div>
-            <div class="item-main form-action">
-                <form action="formdata" method="post" name="form1">
-                    <p>Период страхования</p>
-                    <select name="period">
-                        <option>Выберите из списка</option>
-                        <option>3 месяца</option>
-                        <option>6 Месяцев</option>
-                        <option>12 Месяцев</option>
-                    </select>
-                    <p>Дата начала</p>
-                    <input type="date" name="calendar">
-                    <p>Дата окончания</p>
-                    <input>
-                    <p>Цель использования</p>
-                    <select name="target-use">
-                        <option>Выберите из списка</option>
-                        <option>Личная</option>
-                        <option>Такси</option>
-                        <option>Учебная езда</option>
-                        <option>Дорожные и специальные транспортные средства</option>
-                        <option>Регулярные пассажирские перевозки/перевозка пассажиров по заказам</option>
-                        <option>Перевозка опасных и легко воспламеняемых грузов</option>
-                        <option>Прокат/краткосрочная аренда</option>
-                        <option>Экстренные и коммунальные службы</option>
-                    </select>
+            <div class="item-main formInputDate">
+                <form class="form-action" action="formdata" method="post" name="form1">
+                    <div class="date-part-1">
+                        <p>Период страхования
+                            <select name="period">
+                                <option>Выберите из списка</option>
+                                <option>3 месяца</option>
+                                <option>6 Месяцев</option>
+                                <option>12 Месяцев</option>
+                            </select></p>
+                        <p>Дата начала
+                            <input type="date" name="calendar"></p>
+                        <p>Дата окончания
+                            <input></p>
+                        <p>Цель использования
+                            <select name="target-use">
+                                <option>Выберите из списка</option>
+                                <option>Личная</option>
+                                <option>Такси</option>
+                                <option>Учебная езда</option>
+                                <option>Дорожные и специальные транспортные средства</option>
+                                <option>Регулярные пассажирские перевозки/перевозка пассажиров по заказам</option>
+                                <option>Перевозка опасных и легко воспламеняемых грузов</option>
+                                <option>Прокат/краткосрочная аренда</option>
+                                <option>Экстренные и коммунальные службы</option>
+                            </select></p>
+                    </div>
+                    <h1>Транспортное средство</h1>
+                    <div class="date-part-2">
+
+                        <p>Гос. знак
+                            <input></p>
+                        <p>Год выпуска
+                            <select name="YaerCreate">
+                                <option>Выберите из списка</option>
+                            </select></p>
+                        <p>Категория
+                            <select name="Сategory">
+                                <option>Выберите из списка</option>
+                            </select></p>
+                        <p>Марка
+                            <select name="Brand">
+                                <option>Выберите из списка</option>
+                            </select></p>
+                        <p>Модель
+                            <select name="Model">
+                                <option>Выберите из списка</option>
+                            </select></p>
+                        <p>Модификация
+                            <select name="Modification">
+                                <option>Выберите из списка</option>
+                            </select></p>
+                        <p>VIN
+                            <input></p>
+                        <p>Тип документа(список)
+                            <select name="TypeCarDoc">
+                                <option>Выберите из списка</option>
+                                <option>ПТС</option>
+                                <option>СТС</option>
+                            </select></p>
+                        <p>Серия
+                            <input></p>
+                        <p>Номер
+                            <input></p>
+                    </div>
+
+                    <h1>Собственник <input type="checkbox" name=""><label>Является страхователем</label></h1>
+                    <div class="date-part-3">
+                        <p>Фамилия</p>
+                        <input>
+                        <p>Имя</p>
+                        <input>
+                        <p>Отчество <input type="checkbox" name="">
+                            <label>Без отчества</label></p>
+                        <input>
+                        <p>Дата рождения</p>
+                        <input type="date" name="calendar">
+                        <p>Тип доукмента</p>
+                        <select name="TypePersonDoc">
+                            <option>Выберите из списка</option>
+                            <option>Паспорт РФ</option>
+                        </select>
+                        <p>Серия</p>
+                        <input>
+                        <p>Номер</p>
+                        <input>
+                        <p>Дата выдачи</p>
+                        <input type="date" name="calendar">
+                        <p>Выдан(код подразделения или наименование)</p>
+                        <input>
+                        <p>Адресс регистрации</p>
+                        <input>
+                        <p>Телефон</p>
+                        <input>
+                        <p>E-mail</p>
+                        <input>
+                    </div>
+                    <h1>Страхователь</h1>
+                    <div class="date-part-4">
+
+                        <input type="checkbox" name="">
+                        <label>Является страхователем</label>
+                        <p>Фамилия</p>
+                        <input>
+                        <p>Имя</p>
+                        <input>
+                        <p>Отчество <input type="checkbox" name="">
+                            <label>Без отчества</label></p>
+                        <input>
+                        <p>Дата рождения</p>
+                        <input type="date" name="calendar">
+                        <p>Тип доукмента</p>
+                        <select name="TypePersonDoc">
+                            <option>Выберите из списка</option>
+                            <option>Паспорт РФ</option>
+                        </select>
+                        <p>Серия</p>
+                        <input>
+                        <p>Номер</p>
+                        <input>
+                        <p>Дата выдачи</p>
+                        <input type="date" name="calendar">
+                        <p>Выдан(код подразделения или наименование)</p>
+                        <input>
+                        <p>Адресс регистрации</p>
+                        <input>
+                        <p>Телефон</p>
+                        <input>
+                        <p>E-mail</p>
+                        <input>
+
+
+                        <button>Отправить</button>
+                    </div>
                 </form>
 
 
