@@ -1,5 +1,5 @@
 body {
-  color: black;
+  color:white;
   font-weight: bold;
   font: italic;
   font-size: 15px;
@@ -85,20 +85,21 @@ body {
 .form-action{
   display: flex;
   flex-flow: column nowrap;
-  
   margin-bottom: 2px;
   margin-top: 2px;
-  width: 100%;
+  max-width: 100%;
   background: rgba(255,255, 255, 0.5);
+  padding: 5%;
+  padding-right: 15%;
+  padding-left: 15%;
   }
 
-.date-part-1, .date-part-2, 
-.date-part-3, .date-part-4{
+.f1, .f2, 
+.f3, .f4{
   display: flex;
   flex-flow: row wrap;
-  justify-content: space-between;
-  width: 70%;
-
+  justify-content: space-around;
+  
 } 
 .container-footer {
   display: flex;
@@ -106,9 +107,28 @@ body {
   flex-flow: row wrap;
 }
 
+h1{
+  text-align: center;
+}
+
 label{
   color: black;
   font-weight: bold;
   font-size: 15px;
   font: italic;
+}
+input, select{
+  margin: 5px;
+  max-height: 20px;
+  width: 450px;
+}
+#status-insuder, #patronymic{
+  width: 15px;
+}
+
+button{
+  align-self: center;
+  margin: 20px;
+  max-height: 20px;
+  width: 450px;
 }
