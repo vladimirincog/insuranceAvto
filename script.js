@@ -12,7 +12,7 @@ function readTextFile(file, callback) {
     var rawFile = new XMLHttpRequest();
     rawFile.overrideMimeType("application/json");
     rawFile.open("GET", file, true);
-    rawFile.onreadystatechange = function() {
+    rawFile.onreadystatechange = function () {
         if (rawFile.readyState === 4 && rawFile.status == "200") {
             callback(rawFile.responseText);
         }
@@ -21,7 +21,7 @@ function readTextFile(file, callback) {
 }
 
 //usage:
-readTextFile("question.json", function(text){
+readTextFile("question.json", function (text) {
     var data = JSON.parse(text);
     console.log(data);
 });
@@ -55,3 +55,14 @@ function checkedStatusInsuder() {
         insuder[0].style.display = 'block';
     }
 }
+
+
+//Плавный скролинг (рабочий копипаст)
+jQuery(document).ready(function () {
+    jQuery("a.scrollto").click(function () {
+        elementClick = jQuery(this).attr("href")
+        destination = jQuery(elementClick).offset().top;
+        jQuery("html:not(:animated),body:not(:animated)").animate({ scrollTop: destination }, 1100);
+        return false;
+    });
+});
