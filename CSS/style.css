@@ -11,10 +11,54 @@ body {
   cursor: default;
   /*height: auto;*/
 }
+html{
+  scroll-behavior: smooth;
+}
+a{
+  text-decoration: none;
+  text-transform: uppercase;
+}
+a:visited{
+  color: black;
+}
+a.anchor {
+  display: block;
+  position: relative;
+  top: -250px;
+  visibility: hidden;
+  
+}
+h1 {
+  text-align: center;
+}
+
+label {
+  color: black;
+  font-weight: bold;
+  font-size: 15px;
+  font: italic;
+}
+
+input,
+select {
+  margin: 5px;
+  max-height: 20px;
+  width: 450px;
+}
+
+button {
+  align-self: center;
+  margin: 20px;
+  max-height: 20px;
+  width: 250px;
+}
+
 .back-top {
+  height: 40px;
+  width: 40px;
   position: fixed;
-  top: 95vh;
-  right: 5vh;
+  top: 93vh;
+  right: 3vh;
 }
 .logo,
 .telephon {
@@ -98,6 +142,16 @@ body {
   justify-content: space-around;
 }
 
+
+.form-call-order{
+  display: flex;
+  flex-flow: column nowrap;
+  max-width: 100%;
+}
+form .call-order{
+  margin: 5px;
+}
+
 .container-footer {
   display: flex;
   color: black;
@@ -105,36 +159,12 @@ body {
   background: #343a40;
   height: 10vh;
 }
-
-h1 {
-  text-align: center;
-}
-
-label {
-  color: black;
-  font-weight: bold;
-  font-size: 15px;
-  font: italic;
-}
-input,
-select {
-  margin: 5px;
-  max-height: 20px;
-  width: 450px;
-}
+/*Спойлер*/
 #status-insuder,
 #patronymic {
   width: 15px;
 }
 
-button {
-  align-self: center;
-  margin: 20px;
-  max-height: 20px;
-  width: 450px;
-}
-
-/*Спойлер*/
 details > div {
   cursor: default;
 }
@@ -166,6 +196,7 @@ details > div {
 .spoiler details[open] div {
   animation: spoiler 3s;
 }
+
 @keyframes spoiler {
   0% {
     max-height: 0;
