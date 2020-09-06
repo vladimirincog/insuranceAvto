@@ -1,0 +1,197 @@
+body {
+  color: black;
+  font-weight: 500;
+  /*font-family: 'PT Sans', sans-serif;*/
+  font-family: "PFDinTextCondPro";
+  font-size: 15px;
+  background: #e7e7e7;
+  padding: 0%;
+  margin: 0%;
+  border: 0%;
+  cursor: default;
+  /*height: auto;*/
+}
+.back-top {
+  position: fixed;
+  top: 95vh;
+  right: 5vh;
+}
+.logo,
+.telephon {
+  margin-left: 2%;
+  margin-right: 2%;
+}
+
+.container-header {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: space-between;
+  align-content: center;
+  background: rgb(255, 255, 255);
+}
+
+.item-header {
+  width: 100%;
+  margin: 10px;
+  font-size: xx-large;
+}
+
+.container {
+  position: sticky;
+  top: 0vh;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  /*background: rgba(255,255, 255, 0.5);*/
+}
+.navOpenButton,
+.navCloseButton {
+  display: none;
+  margin: 15px;
+}
+
+
+.item-nav {
+  font-size: x-large;
+  margin: 20px;
+}
+
+.container-main {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+.item-main {
+  height: 100vh;
+}
+.services {
+  text-align: center;
+  margin-bottom: 2px;
+  margin-top: 2px;
+  width: 100%;
+  /*background: rgba(255,255, 255, 0.5);*/
+}
+
+.form-action {
+  display: flex;
+  flex-flow: column nowrap;
+  margin-bottom: 2px;
+  margin-top: 2px;
+  max-width: 100%;
+  /*background: rgba(255,255, 255, 0.5);*/
+  padding: 5%;
+  padding-right: 15%;
+  padding-left: 15%;
+}
+
+.f1,
+.f2,
+.f3,
+.f4 {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+
+.container-footer {
+  display: flex;
+  color: black;
+  flex-flow: row wrap;
+  background: #343a40;
+  height: 10vh;
+}
+
+h1 {
+  text-align: center;
+}
+
+label {
+  color: black;
+  font-weight: bold;
+  font-size: 15px;
+  font: italic;
+}
+input,
+select {
+  margin: 5px;
+  max-height: 20px;
+  width: 450px;
+}
+#status-insuder,
+#patronymic {
+  width: 15px;
+}
+
+button {
+  align-self: center;
+  margin: 20px;
+  max-height: 20px;
+  width: 450px;
+}
+
+/*Спойлер*/
+details > div {
+  cursor: default;
+}
+.spoiler {
+  border: 1px solid #e0e0e0;
+  padding: 0 1em;
+  width: 90vh;
+  cursor: pointer;
+}
+.spoiler details {
+  align-items: center;
+  padding: 1em 0;
+}
+.spoiler details + details {
+  border-top: 1px solid #e0e0e0;
+}
+.spoiler summary {
+  align-items: center;
+  color: black;
+}
+.spoiler details div {
+  overflow: hidden;
+  padding: 1em 0 0;
+  align-items: center;
+}
+
+/*Анимация спойлера 
+высота от 0 до 10EM в течении 3 сек*/
+.spoiler details[open] div {
+  animation: spoiler 3s;
+}
+@keyframes spoiler {
+  0% {
+    max-height: 0;
+  }
+  100% {
+    max-height: 10em;
+  }
+}
+
+@media (max-width: 1200px) {
+  .container {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    /*background: rgba(255,255, 255, 0.5);*/
+  }
+  .navOpenButton,
+  .navCloseButton {
+    display: block;
+    margin-bottom: 15px;
+  }
+  .item-nav {
+    font-size: x-small;
+    margin: 20px;
+    display: none;
+  }
+}
