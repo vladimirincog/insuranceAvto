@@ -3,15 +3,23 @@
 
 <head>
     <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet">
+    <!--Подключение шрифта-->
     <script src="http://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
         crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="style.css">
+    <!--JQuery-->
+    <link rel="stylesheet" href="CSS/font.css">
+    <!--Подключение шрифтов-->
+    <link rel="stylesheet" href="CSS/style.css">
     <script type="text/javascript" src="question.json"></script>
 
 </head>
 <title>Автострахование РФ</title>
 
 <body>
+    <div class="back-top">
+        <img src="img/navClose.png"></div>
+    </div>
     <div class="top">
         <header class="container-header">
             <div class="logo">АВТОСТРАХОВАНИЕ РФ</div>
@@ -24,14 +32,16 @@
         <div class="container">
             <div class='navOpenButton' onclick="navOpenFun()"><img src="img/navOpen.png"></div>
             <div class="item-nav">Услуги</div>
-            <div class="item-nav">Работа</div>
-            <div class="item-nav">Цены</div>
+            <div class="item-nav">Приемущества</div>
+            <div class="item-nav">Часто задаваемые вопросы</div>
+            <div class="item-nav">Заказ звонка</div>
             <div class="item-nav">Контакты</div>
             <div class='navCloseButton' onclick="navCloseFun()"><img src="img/navClose.png"></div>
         </div>
 
         <main class="container-main">
             <div class="item-main services">
+                <h1>Услуги</h1>
                 <br> Получите электронный полис ОСАГО в течении часа
                 <br> ОСАГО КАСКО ДСАГО
                 <br> Категории А, В, С, ТАКСИ
@@ -41,7 +51,7 @@
                 <br> По минимальной ставке по всей РФ
                 <br> БЕЗ РАЗЪЕЗДОВ И ОЧЕРЕДЕЙ
             </div>
-            <div class="item-main formInputDate">
+            <div class="item-main-2 formInputDate">
                 <form class="form-action" action="formdata" method="post" name="form1">
                     <h1>Узнать цену страховки</h1>
                     <div class="f1">
@@ -259,27 +269,72 @@
 
             </div>
             <div class="item-main">
+                <h1>Наши приемущества</h1>
+            </div>
+            <div class="item-main">
                 <h1>Часто задаваемые вопросы</h1>
-                <div class="container-question">
-                    <div class="questions">
-                        <div class="question">Почему стоимость ОСАГО в страховых компаниях может отличаться?</div>
-                        <div class="question">Чего вы не знали об ОСАГО</div>
-                        <div class="question">Что такое КБМ?</div>
-                        <div class="question">Почему некорректно отображается КБМ и как его исправить?</div>
-                        <div class="question">Как вписать в полис нового водителя?</div>
-                        <div class="question">Как проверить подлинность полиса ОСАГО?</div>
-                        <div class="question">Что если страховая компания прекратила свою работу?</div>
-                    </div>
-                    <div class="answers">
 
-                    </div>
+                <div class="spoiler">
+                    <details>
+                        <summary>Почему стоимость ОСАГО в страховых компаниях может отличаться?</summary>
+                        <div>Разница в стоимости ОСАГО обусловлена тем, что страховые компании вправе устанавливать
+                            базовые тарифы в пределах от 2 746 руб. до 4 924 рублей. Базовый тариф умножается на
+                            коэффициенты (персональные для каждого клиента и единые для всех страховых компаний) и
+                            получается стоимость полиса ОСАГО. Сервис позволяет увидеть эту разницу и выбрать самое
+                            выгодное на текущий момент предложение, сэкономив на покупке до 20 %. Коэффициенты и формула
+                            расчета стоимости ОСАГО: ТБ — базовый тариф; КТ — территориальный коэффициент; КБМ —
+                            коэффициент бонус-малус; КВС — коэффициент возраст-стаж; КО — ограничивающий коэффициент; КМ
+                            — коэффициент мощности двигателя; КС — коэффициент сезонности; КН — коэффициент нарушений;
+                            КП — коэффициент срока страхования. Все значения подставляются в формулу: Стоимость ОСАГО =
+                            ТБ * КТ * КБМ * КВС * КО * КМ * КС * КН * КП.</div>
+                    </details>
+                    <details>
+                        <summary>Чего вы не знали об ОСАГО</summary>
+                        <div>Содержимое 2</div>
+                    </details>
+                    <details>
+                        <summary>Что такое КБМ?</summary>
+                        <div>Содержимое 3</div>
+                    </details>
+                    <details>
+                        <summary>Почему некорректно отображается КБМ и как его исправить?</summary>
+                        <div>Содержимое 4</div>
+                    </details>
+                    <details>
+                        <summary>Как вписать в полис нового водителя?</summary>
+                        <div>Содержимое 5</div>
+                    </details>
+                    <details>
+                        <summary>Как проверить подлинность полиса ОСАГО?</summary>
+                        <div>Содержимое 6</div>
+                    </details>
+                    <details>
+                        <summary>Что если страховая компания прекратила свою работу?</summary>
+                        <div>Содержимое 6</div>
+                    </details>
                 </div>
+
+            </div>
+            <div class="item-main call-order">
+                <form class="form-action2" action="formdata" method="post" name="form1">
+                    <h1>Заказ звонка</h1>
+                    <P>Имя</P>
+                    <input>
+                    <p>Номер телефона</p>
+                    <input>
+                    <br>
+                    <button>Отправить</button>
+                </form>
+            </div>
+            <div class="item-main">
+                <h1>Контакты</h1>
+                <p>Нужна страховка звони Дудуське!</p>
             </div>
         </main>
 
 
         <div class="container-footer">
-            <footer class="item-footer"></footer>
+            <footer class="item-footer">Конец! Все права защищены!</footer>
         </div>
         <script src="script.js"></script>
 </body>
