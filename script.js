@@ -5,8 +5,6 @@ let navCloseButton = document.getElementsByClassName('navCloseButton'); //Стр
 let statusInsuder = document.getElementById('status-insuder');          //Cтатус собственника/страхователя
 let menuInsuder = document.getElementsByClassName('f4');                //Меню данных страхователя
 let insuder = document.getElementsByClassName('menu-4')                 //Заголовок меню данных страхователя
-//let data = $.getJSON( "question.json", function( data ) {});                       //Получение ответов на часто задаваемые вопросы вопросы из JSON файла - "JSON БД"
-//var mydata = JSON.parse(data);
 
 function readTextFile(file, callback) {
     var rawFile = new XMLHttpRequest();
