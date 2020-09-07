@@ -9,7 +9,6 @@ body {
   margin: 0%;
   border: 0%;
   cursor: default;
-  /*height: auto;*/
 }
 html{
   scroll-behavior: smooth;
@@ -39,11 +38,17 @@ label {
   font: italic;
 }
 
+.form-call-order>input{
+  width: 400px;
+}
+
 input,
-select {
-  margin: 5px;
-  max-height: 20px;
-  width: 450px;
+select,
+option {
+  height: 20px;
+  width: 200px;
+  border: 2px solid black;
+  border-radius: 4px;
 }
 
 button {
@@ -51,6 +56,8 @@ button {
   margin: 20px;
   max-height: 20px;
   width: 250px;
+  border: 2px solid black;
+  border-radius: 4px;
 }
 
 .back-top {
@@ -111,7 +118,8 @@ button {
   align-content: center;
 }
 .item-main {
-  height: 100vh;
+  min-height: 100vh;
+  max-width: 100%;
 }
 .services {
   text-align: center;
@@ -139,9 +147,16 @@ button {
 .f4 {
   display: flex;
   flex-flow: row wrap;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
+.f1-e,
+.f2-e,
+.f3-e,
+.f4-e {
+  align-items: center;
+  align-content: center;
+}
 
 .form-call-order{
   display: flex;
@@ -173,6 +188,7 @@ details > div {
   padding: 0 1em;
   width: 90vh;
   cursor: pointer;
+  max-width: 100%;
 }
 .spoiler details {
   align-items: center;
@@ -192,9 +208,9 @@ details > div {
 }
 
 /*Анимация спойлера 
-высота от 0 до 10EM в течении 3 сек*/
+высота от 0 до 10EM в течении Xs сек*/
 .spoiler details[open] div {
-  animation: spoiler 3s;
+  animation: spoiler 0.8s;
 }
 
 @keyframes spoiler {
