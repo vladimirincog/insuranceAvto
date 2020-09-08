@@ -5,6 +5,10 @@ let navCloseButton = document.getElementsByClassName('navCloseButton'); //Стр
 let statusInsuder = document.getElementById('status-insuder');          //Cтатус собственника/страхователя
 let menuInsuder = document.getElementsByClassName('f4');                //Меню данных страхователя
 let insuder = document.getElementsByClassName('menu-4')                 //Заголовок меню данных страхователя
+//ChekBox отчества-1
+//input отчества-1
+//ChekBox отчества-2
+//input отчества-2
 
 function readTextFile(file, callback) {
     var rawFile = new XMLHttpRequest();
