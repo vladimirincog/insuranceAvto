@@ -8,12 +8,13 @@
     <!--JQuery-->
     <script src="http://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
         crossorigin="anonymous"></script>
+
     <!--Подключение шрифтов-->
     <link rel="stylesheet" href="CSS/font.css">
     <!--Подключение стилей-->
     <link rel="stylesheet" href="CSS/style.css">
     <!--Подключение скриптов-->
-    <script type="text/javascript" src="question.json"></script>
+        <script type="text/javascript" src="JS/jquery.maskedinput.min.js"></script>
 
 </head>
 <title>Автострахование РФ</title>
@@ -215,11 +216,11 @@
                         </div>
                         <div class="f3-e">
                             <p>Телефон</p>
-                            <input>
+                            <input class="tel" placeholder="+7(999)999-99-99">
                         </div>
                         <div class="f3-e">
                             <p>E-mail</p>
-                            <input>
+                            <input placeholder="ivan2000@mail.ru">
                         </div>
                     </div>
                     <h1 class='menu-4'> Страхователь</h1>
@@ -270,11 +271,11 @@
                         </div>
                         <div class="f4-e">
                             <p>Телефон</p>
-                            <input>
+                            <input class="tel" placeholder="+7(999)999-99-99">
                         </div>
                         <div class="f4-e">
                             <p>E-mail</p>
-                            <input>
+                            <input placeholder="ivan2000@mail.ru">
                         </div>
                     </div>
                     <button>Отправить</button>
@@ -469,9 +470,9 @@
                     <a name="call" class="anchor"></a>
                     <h1>Заказ звонка</h1>
                     <P class="call-order" type="text">Имя</P>
-                    <input class="call-order">
+                    <input class="call-order" placeholder="Иван">
                     <p class="call-order">Номер телефона</p>
-                    <input class="call-order" type="tel">
+                    <input class="call-order tel" type="tel" placeholder="+7(999)999-99-99">
                     <br>
                     <button class="call-order">Отправить</button>
                 </form>
@@ -489,7 +490,7 @@
         <div class="container-footer">
             <footer class="item-footer">Конец! Все права защищены!</footer>
         </div>
-        <script src="script.js"></script>
+        <script type="text/javascript" src="JS/script.js"></script>
 </body>
 
 </html>
