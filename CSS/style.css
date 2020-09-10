@@ -131,13 +131,24 @@ button {
   max-width: 100%;
 }
 .services {
-  text-align: center;
+  text-align: left;
   margin-bottom: 7%;
   margin-top: 7%;
-  width: 100%;
   font-size: 20pt;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
 }
-
+.button-calculation{
+  height: 75px;
+  width: 300px;
+  background: white;
+  text-align: center;
+  padding-top: 10px;
+  margin: 30px;
+}
 .form-action {
   display: flex;
   flex-flow: column nowrap;
