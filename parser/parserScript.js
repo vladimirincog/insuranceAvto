@@ -56,7 +56,7 @@ for(let i=0; i<mark.length; i++){
 переходим на страницу назад и повторяем цикл для другой модели
 <span data-v-2fd750e4="" class="car-list-item__text">ACE</span> */
 /*<div data-v-2c05f226="" class="tabs__header-item _active">Марка</div> - кнопка для возврата назад*/
-const markButton = document.querySelectorAll('span[class^="tabs__header-item _active"]');
+//const markButton = document.querySelectorAll('span[class^="tabs__header-item _active"]');
 
 for(let i=0; i<mark.length; i++){
     mark[i].click();
