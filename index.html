@@ -14,19 +14,20 @@
     <!--Подключение стилей-->
     <link rel="stylesheet" href="CSS/style.css">
     <!--Подключение скриптов-->
-        <script type="text/javascript" src="JS/jquery.maskedinput.min.js"></script>
+    <script type="text/javascript" src="JS/jquery.maskedinput.min.js"></script>
 
 </head>
 <title>Автострахование РФ</title>
 
 <body>
-    <a name="services"></a>
-    <a href="#services">
-        <div class="back-top">
-            <img src="img/navClose.png"></div>
-        </div>
-    </a>
-    <div class="top">
+    <div class="conatiner-number-one">
+        <a name="services"></a>
+        <a href="#services">
+            <div class="back-top">
+                <img src="img/navClose.png">
+            </div>
+        </a>
+
         <header class="container-header">
             <div class="logo">АВТОСТРАХОВАНИЕ РФ</div>
             <div class="telephon">
@@ -35,7 +36,7 @@
             </div>
         </header>
 
-        <div class="container">
+        <div class="container-nav">
             <div class='navOpenButton' onclick="navOpenFun()"><img src="img/navOpen.png"></div>
             <a href="#services">
                 <div class="item-nav">Услуги</div>
@@ -55,30 +56,30 @@
             <div class='navCloseButton' onclick="navCloseFun()"><img src="img/navClose.png"></div>
         </div>
         <main class="container-main">
+            <h1>Услуги</h1>
             <div class="item-main services">
-                <div class="servis-item">
-                <h1>Услуги</h1>
-                <br> Получите электронный полис ОСАГО в течении часа
-                <br> ОСАГО КАСКО ДСАГО
-                <br> Категории А, В, С, ТАКСИ
-                <br> Тех осмотр
-                <br> Восстановление КБМ
-                <br> Договор купли-продажи
-                <br> По минимальной ставке по всей РФ
-                <br> БЕЗ РАЗЪЕЗДОВ И ОЧЕРЕДЕЙ
-            </div>
-            <div class="servis-item">
-                <a href="#calculation"><div class="button-calculation">Расчет стоймости страховки</div></a>
-            </div>
-            </div>
 
-            <div class="item-main-2 formInputDate">
+                <div class="servis-item">
+                    <br> Получите электронный полис ОСАГО в течении часа
+                    <br> ОСАГО КАСКО ДСАГО
+                    <br> Категории А, В, С, ТАКСИ
+                    <br> Тех осмотр
+                    <br> Восстановление КБМ
+                    <br> Договор купли-продажи
+                    <br> По минимальной ставке по всей РФ
+                    <br> БЕЗ РАЗЪЕЗДОВ И ОЧЕРЕДЕЙ
+                </div>
+                <div class="servis-item">
+                    <a href="#calculation">
+                        <div class="button-calculation">Расчет стоймости страховки</div>
+                    </a>
+                </div>
+            </div>
+            <h1>Узнать цену страховки</h1>
+            <div class="item-main formInputDate">
                 <form class="form-action" action="formdata" method="post" name="form1">
                     <a name="calculation" class="anchor"></a>
-                    <h1>Узнать цену страховки</h1>
                     <div class="f1">
-
-
                         <div class="f1-e">
                             <p>Период страхования</p>
                             <select name="period">
@@ -291,15 +292,18 @@
 
             </div>
             <a name="advantages" class="anchor"></a>
-            <div class="item-main">
-                <h1>Наши приемущества</h1>
+            <h1>Наши приемущества</h1>
+            <div class="item-main container-profit">
+                <div class="item-pofit">1</div>
+                <div class="item-pofit">2</div>
+                <div class="item-pofit">3</div>
+                <a href="#calculation">
+                    <div class="button-calculation">Расчет стоймости страховки</div>
+                </a>
             </div>
-
+            <h1>Часто задаваемые вопросы</h1>
             <div class="item-main">
                 <a name="FAQ" class="anchor"></a>
-                <h1>Часто задаваемые вопросы</h1>
-
-
                 <div class="spoiler">
                     <details>
                         <summary>Почему стоимость ОСАГО в страховых компаниях может отличаться?</summary>
@@ -470,11 +474,10 @@
                 </div>
 
             </div>
-
+            <h1>Заказ звонка</h1>
             <div class="item-main call-order">
                 <form class="form-call-order" action="formdata" method="post" name="form1">
                     <a name="call" class="anchor"></a>
-                    <h1>Заказ звонка</h1>
                     <P class="call-order" type="text">Имя</P>
                     <input class="call-order" placeholder="Иван">
                     <p class="call-order">Номер телефона</p>
@@ -483,11 +486,9 @@
                     <button class="call-order">Отправить</button>
                 </form>
             </div>
-
+            <h1>Контакты</h1>
             <div class="item-main">
                 <a name="contacts" class="anchor"></a>
-                <h1>Контакты</h1>
-
                 <p>Нужна страховка звони Дудуське!</p>
             </div>
         </main>
@@ -496,7 +497,8 @@
         <div class="container-footer">
             <footer class="item-footer">Конец! Все права защищены!</footer>
         </div>
-        <script type="text/javascript" src="JS/script.js"></script>
+    </div>
+    <script type="text/javascript" src="JS/script.js"></script>
 </body>
 
 </html>
