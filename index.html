@@ -20,9 +20,10 @@
 <title>Автострахование РФ</title>
 
 <body>
+    <a name="back"></a>
     <div class="conatiner-number-one">
-        <a name="services"></a>
-        <a href="#services">
+
+        <a href="#back">
             <div class="back-top">
                 <img src="img/navClose.png">
             </div>
@@ -56,8 +57,15 @@
             <div class='navCloseButton' onclick="navCloseFun()"><img src="img/navClose.png"></div>
         </div>
         <main class="container-main">
+            <a name="services"></a>
             <div class="item-main services">
                 <h1>Услуги</h1>
+
+                <div class="services-item">
+                    <a href="#calculation">
+                        <div class="button-calculation">Расчет стоймости страховки</div>
+                    </a>
+                </div>
                 <div class="services-item">
                     <br> Получите электронный полис ОСАГО в течении часа
                     <br> ОСАГО КАСКО ДСАГО
@@ -68,14 +76,11 @@
                     <br> По минимальной ставке по всей РФ
                     <br> БЕЗ РАЗЪЕЗДОВ И ОЧЕРЕДЕЙ
                 </div>
-                <div class="services-item">
-                    <a href="#calculation">
-                        <div class="button-calculation">Расчет стоймости страховки</div>
-                    </a>
-                </div>
+
             </div>
-            <h1>Узнать цену страховки</h1>
-            <div class="item-main formInputDate">
+
+            <div class="item-main form-input-date">
+                <h1>Узнать цену страховки</h1>
                 <form class="form-action" action="formdata" method="post" name="form1">
                     <a name="calculation" class="anchor"></a>
                     <div class="f1">
@@ -113,8 +118,9 @@
                         </div>
                     </div>
 
-                    <h1>Транспортное средство</h1>
+
                     <div class="f2">
+                        <h2>Транспортное средство</h2>
                         <div class="f2-e">
                             <p>Гос. знак</p>
                             <input>
@@ -172,10 +178,11 @@
                         </div>
                     </div>
 
-                    <h1>Собственник <input id='status-insuder' type="checkbox"
-                            onclick="checkedStatusInsuder()"><label>Является
-                            страхователем</label></h1>
+
                     <div class="f3">
+                        <h2>Собственник <input id='status-insuder' type="checkbox"
+                                onclick="checkedStatusInsuder()"><label>Является
+                                страхователем</label></h2>
                         <div class="f3-e">
                             <p>Фамилия</p>
                             <input>
@@ -229,8 +236,9 @@
                             <input placeholder="ivan2000@mail.ru">
                         </div>
                     </div>
-                    <h1 class='menu-4'> Страхователь</h1>
+
                     <div class="f4">
+                        <h2 class='menu-4'> Страхователь</h2>
                         <div class="f4-e">
                             <p>Фамилия</p>
                             <input>
@@ -290,18 +298,33 @@
 
 
             </div>
-            <a name="advantages" class="anchor"></a>
-            <h1>Наши приемущества</h1>
+
+
             <div class="item-main container-profit">
-                <div class="item-pofit">1</div>
-                <div class="item-pofit">2</div>
-                <div class="item-pofit">3</div>
+                <h1>Наши приемущества</h1>
+                <a name="advantages" class="anchor"></a>
+                <div class="item-pofit">
+                    <h3>ЭКСПРЕСС-РАСЧЕТ И ОФОРМЛЕНИЕ Цена инзвестна зарание</h3>
+                    <p>Время расчета полиса Е-ОСАГО - 5 минут. <br> Время овормления полиса в течении часа.</p>
+                </div>
+                <div class="item-pofit">
+                    <h3>СКИДКА 50% (ПРЕДОСТАВЛЯЕТСЯ ПО ДАННЫМ РСА)</h3>
+                    <p>На ранке страхования много посредников, мы работает на прямую, действительно лучшее предложение
+                        на рынке Страхования. Мы предоставляем возможность оформить ОСАГО со скидкой в 50%, таким
+                        образом экономим Вам от 5000 руб.</p>
+                </div>
+                <div class="item-pofit">
+                    <h3>САМАЯ НИЗКАЯ СТАВКА ВО ВСЕХ РЕГИОНАХ РФ</h3>
+                    <p>Мы работаем с "Альфа Страхование", "Ингострах", "РЕСО" и еще 27 СК напрямую, исключая любые
+                        наценки Минимальный тариф - 2700 руб.</p>
+                </div>
                 <a href="#calculation">
                     <div class="button-calculation">Расчет стоймости страховки</div>
                 </a>
             </div>
-            <h1>Часто задаваемые вопросы</h1>
-            <div class="item-main">
+
+            <div class="item-main FAQ">
+                <h1>Часто задаваемые вопросы</h1>
                 <a name="FAQ" class="anchor"></a>
                 <div class="spoiler">
                     <details>
@@ -473,22 +496,25 @@
                 </div>
 
             </div>
-            <h1>Заказ звонка</h1>
-            <div class="item-main call-order">
+
+            <div class="item-main container-call"><a name="call" class="anchor"></a>
+                <h1>Заказ звонка</h1>
                 <form class="form-call-order" action="formdata" method="post" name="form1">
-                    <a name="call" class="anchor"></a>
-                    <P class="call-order" type="text">Имя</P>
+
+                    <P class="item-call" type="text">Имя</P>
                     <input class="call-order" placeholder="Иван">
-                    <p class="call-order">Номер телефона</p>
+                    <p class="item-call">Номер телефона</p>
                     <input class="call-order tel" type="tel" placeholder="+7(999)999-99-99">
                     <br>
-                    <button class="call-order">Отправить</button>
+                    <button class="item-call">Отправить</button>
                 </form>
             </div>
-            <h1>Контакты</h1>
-            <div class="item-main">
+
+            <div class="item-main contacts">
+                <h1>Контакты</h1>
                 <a name="contacts" class="anchor"></a>
-                <p>Нужна страховка звони Дудуське!</p>
+                <p>Email: 9092345673@mail.ru </p>
+                <p>Телефон: 89092345673</p>
             </div>
         </main>
 
