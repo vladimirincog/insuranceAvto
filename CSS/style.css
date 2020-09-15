@@ -17,7 +17,7 @@ body {
   width: 80%;
   margin: auto;
   background: #e7e7e7;
-}
+ }
 a {
   text-decoration: none;
   text-transform: uppercase;
@@ -131,19 +131,29 @@ button {
   align-content: center;
 }
 .item-main {
-  min-height: 100vh;
+  min-height: 90vh;
   max-width: 100%;
 }
 .services {
+  width: 100%;
+  background-image: url('../img/2.jpg');
+  background-size: cover;
   text-align: left;
-  margin-bottom: 7%;
-  margin-top: 7%;
+  margin: auto;
   font-size: 25px;
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
-  align-content: top;
+  align-content: center;
 }
+.services > h1{
+margin-top: auto;
+}
+.services-item{
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
 .button-calculation {
   height: 75px;
   width: 300px;
@@ -272,7 +282,7 @@ details > div {
     /*background: rgba(255,255, 255, 0.5);*/
   }
   .services {
-    background-image: url(.../img/1.gpg);
+    
     text-align: center;
     margin-bottom: 7%;
     margin-top: 7%;
@@ -281,7 +291,10 @@ details > div {
     flex-flow: column wrap;
     justify-content: top;
     align-items: center;
+    background-image: url('../img/2.jpg');
+    
   }
+
   .conatiner-number-one{
     width: 100%;
     margin: auto;
