@@ -359,13 +359,27 @@ details > div {
     flex-flow: column wrap;
     justify-content: top;
     align-items: center;
-    background-image: url("../img/2.jpg");
+    justify-content: center;
+    background-image: url("../img/2_2.jpg");
   }
 
   .conatiner-number-one {
     width: 100%;
     margin: auto;
     background: #e7e7e7;
+  }
+  .container-profit {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    background: #8abe5c;
+    width: 100%;
+    height: 100%;
+  }
+  .item-pofit{
+    width: 500px;
+    height: 10vh;
   }
   .navOpenButton,
   .navCloseButton {
