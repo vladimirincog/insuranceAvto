@@ -363,10 +363,10 @@ details > div {
   }
   .services {
     text-align: center;
-    font-size: 25px;
+    font-size: 20px;
     display: flex;
-    flex-flow: column wrap;
-    justify-content: top;
+    flex-flow: column nowrap;
+    justify-content: center;
     align-items: center;
     justify-content: center;
     background-image: url("../img/2_2.jpg");
