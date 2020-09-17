@@ -148,6 +148,7 @@ button {
 }
 .services {
   width: 100%;
+  height: 100%;
   background-image: url("../img/2_2.jpg");
   background-size: cover;
   text-align: left;
@@ -189,6 +190,7 @@ button {
   padding-right: 15%;
   padding-left: 15%;
 }
+
 .form-input-date > h1 {
   flex-basis: 100%;
   color: black;
@@ -350,6 +352,7 @@ details > div {
 
 
 @media (max-width: 1200px) {
+
   .container-nav {
     display: flex;
     flex-flow: column wrap;
@@ -360,8 +363,6 @@ details > div {
   }
   .services {
     text-align: center;
-    margin-bottom: 7%;
-    margin-top: 7%;
     font-size: 25px;
     display: flex;
     flex-flow: column wrap;
@@ -369,6 +370,7 @@ details > div {
     align-items: center;
     justify-content: center;
     background-image: url("../img/2_2.jpg");
+    background-size: cover;
   }
 
   .conatiner-number-one {
