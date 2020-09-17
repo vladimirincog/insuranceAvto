@@ -100,7 +100,7 @@ button {
   align-items: center;
   justify-content: space-between;
   align-content: center;
-  background: rgb(255, 255, 255);
+  background: white;
 }
 
 .item-header {
@@ -137,7 +137,9 @@ button {
   justify-content: center;
   align-items: center;
   align-content: center;
-}
+  
+  }
+
 .item-main {
   min-height: 100vh;
   max-width: 100%;
@@ -372,6 +374,7 @@ details > div {
   .conatiner-number-one {
     width: 100%;
     margin: auto;
+    padding: 0;
     background: #e7e7e7;
   }
   .container-profit {
