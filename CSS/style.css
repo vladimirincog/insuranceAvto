@@ -47,39 +47,46 @@ p {
   font-size: 15px;
   margin: 5px;
 }
-label {
-  color: black;
+label,
+.form-input-date p {
+  font-size: 20pt;
   font-weight: bold;
-  font-size: 15px;
-  font: italic;
+  font-size: 25px;
 }
+
 input,
 select,
 option {
-  height: 20px;
-  width: 200px;
+  height: 40px;
+  width: 300px;
   border-radius: 4px;
   border: 0;
   padding: 0;
   margin: 2px;
+  background: white;
+  font-size: 15pt;
 }
 .form-call-order > input {
   width: 100%;
   padding: 5px;
   max-width: 100%;
+  background: white;
 }
 input[type="checkbox"] {
-  width: 10px;
-  height: 10px;
+  width: 30px;
+  height: 30px;
+  background: white;
+  font-size: 20pt;
 }
 button {
   align-self: center;
   margin: 20px;
-  max-height: 20px;
   width: 250px;
   border: 2px solid white;
   border-radius: 4px;
   max-width: 100%;
+  background: white;
+  font-size: 17pt;
 }
 
 .back-top {
@@ -107,7 +114,6 @@ button {
 .item-header {
   width: 100%;
   margin: 10px;
-  font-size: xx-large;
 }
 
 .container-nav {
@@ -119,7 +125,6 @@ button {
   align-items: center;
   align-content: center;
   background: white;
-  /*background: #e7e7e7;*/
 }
 .navOpenButton,
 .navCloseButton {
@@ -193,7 +198,6 @@ button {
   padding-right: 15%;
   padding-left: 15%;
 }
-
 .form-input-date > h1 {
   flex-basis: 100%;
   color: black;
@@ -201,7 +205,8 @@ button {
 .f1,
 .f2,
 .f3,
-.f4 {
+.f4,
+.f5 {
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
@@ -211,20 +216,46 @@ button {
 .f1 > h2,
 .f2 > h2,
 .f3 > h2,
-.f4 > h2 {
+.f4 > h2,
+.f5 > h2,
+.number-driver {
   flex-basis: 100%;
 }
 
 .f1-e,
 .f2-e,
 .f3-e,
-.f4-e {
+.f4-e,
+.f5-e {
   margin-left: 8px;
   margin-right: 8px;
   display: flex;
   flex-flow: column wrap;
   align-items: center;
   align-content: center;
+}
+.number-driver {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  margin: 0%;
+  padding: 0%;
+}
+.driver {
+  background:white;
+  height: 40px;
+  width: 40px;
+  border: 3px solid white;
+  text-align: center;
+  font-size: 33px;
+}
+.start-driver {
+  border-radius: 10px 0px 0px 10px;
+  background: #8abe5c;
+}
+.end-driver {
+  border-radius: 0px 10px 10px 0px;
+  width: 230px;
 }
 .container-profit {
   display: flex;
@@ -304,7 +335,6 @@ form {
 .FAQ > h1 {
   color: black;
 }
-
 /*Спойлер FAQ*/
 #status-insuder,
 #patronymic {
@@ -315,21 +345,16 @@ details > div {
   cursor: default;
 }
 .spoiler {
-  border: 1px solid #e0e0e0;
+  /* border: 1px solid #e0e0e0;*/
   padding: 0 1em;
   cursor: pointer;
-  max-width: 100%;
 }
 .spoiler details {
   align-items: center;
   padding: 1em 0;
 }
-.spoiler details + details {
-  border-top: 0px solid #e0e0e0;
-}
 .spoiler summary {
   align-items: center;
-  color: black;
 }
 .spoiler details div {
   overflow: hidden;
@@ -352,7 +377,7 @@ details > div {
   }
 }
 /*------------------------------------*/
-@media (max-width: 1000px)  {
+@media (max-width: 1000px) {
   input,
   select,
   option {
@@ -372,6 +397,40 @@ details > div {
     font-size: 17pt;
   }
 
+  input,
+  select,
+  option {
+    height: 40px;
+    width: 400px;
+    border-radius: 4px;
+    border: 0;
+    padding: 0;
+    margin: 2px;
+    font-size: 12pt;
+  }
+  label,
+  .form-input-date p {
+    font-size: 20pt;
+  }
+  .form-call-order > input {
+    width: 100%;
+    padding: 5px;
+    max-width: 100%;
+  }
+  input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+  }
+  button {
+    align-self: center;
+    margin: 20px;
+    height: 40px;
+    width: 400px;
+    border: 3px solid white;
+    border-radius: 4px;
+    font-size: 17pt;
+  }
+
   .container-nav {
     display: flex;
     flex-flow: column wrap;
@@ -379,17 +438,9 @@ details > div {
     align-items: center;
     align-content: center;
   }
-  .services {
-    text-align: center;
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
-    align-items: center;
-    justify-content: center;
-    background-image: url("../img/2_2m.jpg");
-    background-size: cover;
+  .form-call-order {
+    width: 70%;
   }
-
   .conatiner-number-one {
     width: 100%;
     max-width: 100%;
@@ -419,6 +470,52 @@ details > div {
   .item-nav {
     font-size: 20pt;
     margin: 20px;
+    display: none;
+  }
+  .services {
+    text-align: center;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    justify-content: center;
+    background-image: url("../img/2_2m.jpg");
+    background-size: cover;
+  }
+  .services-item {
+    margin: 0%;
+    padding: 0%;
+  }
+  .services-item > p {
+    font-size: 42px;
+    padding: 0%;
+    margin: 0%;
+  }
+  .services-item > .button-calculation {
+    margin: 0px;
+  }
+  .contacts > p {
+    font-size: 50px;
+  }
+  .item-nav {
+    font-size: 50px;
+    margin: 20px;
+  }
+  .form-call-order > p {
+    color: white;
+    font-size: 40px;
+  }
+}
+@media (min-width: 1000px) {
+  .navOpenButton {
+    display: none;
+  }
+}
+/*Альбомная ориентация*/
+@media (orientation: landscape) and (max-height: 600px) {
+  .item-nav {
+    font-size: 17pt;
+    margin: 15px;
     display: none;
   }
 }
