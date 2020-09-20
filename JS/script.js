@@ -4,7 +4,12 @@ let navOpenButton = document.getElementsByClassName('navOpenButton');   //Стр
 let navCloseButton = document.getElementsByClassName('navCloseButton'); //Стрелка закрытия меню
 let statusInsuder = document.getElementById('status-insuder');          //Cтатус собственника/страхователя
 let menuInsuder = document.getElementsByClassName('f4');                //Меню данных страхователя
-let insuder = document.getElementsByClassName('menu-4')                 //Заголовок меню данных страхователя
+let insuder = document.getElementsByClassName('menu-4');                //Заголовок меню данных страхователя
+let drivers = document.getElementsByClassName('driver');                //Меню кол-ва водителей
+let middleNameCheckOne = document.getElementsByClassName('middle-name-check-1');
+let middleNameCheckTwo = document.getElementsByClassName('middle-name-check-2');
+let middleNameOne = document.getElementsByClassName('middle-name-1');
+let middleNameTwo = document.getElementsByClassName('middle-name-2');
 //ChekBox отчества-1
 //input отчества-1
 //ChekBox отчества-2
@@ -57,7 +62,16 @@ function checkedStatusInsuder() {
     }
 }
 
-
+/*function check() {
+var chbox;
+chbox=document.getElementById('one');
+	if (chbox.checked) {
+		alert('Выбран');
+	}
+	else {
+		alert ('Не выбран');
+	}
+}*/
 //Плавный скролинг (рабочий копипаст)
 jQuery(document).ready(function () {
     jQuery("a.scrollto").click(function () {
