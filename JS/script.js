@@ -5,15 +5,99 @@ let navCloseButton = document.getElementsByClassName('navCloseButton'); //Стр
 let statusInsuder = document.getElementById('status-insuder');          //Cтатус собственника/страхователя
 let menuInsuder = document.getElementsByClassName('f4');                //Меню данных страхователя
 let insuder = document.getElementsByClassName('menu-4');                //Заголовок меню данных страхователя
-let drivers = document.getElementsByClassName('driver');                //Меню кол-ва водителей
-let middleNameCheckOne = document.getElementsByClassName('middle-name-check-1');
-let middleNameCheckTwo = document.getElementsByClassName('middle-name-check-2');
-let middleNameOne = document.getElementsByClassName('middle-name-1');
-let middleNameTwo = document.getElementsByClassName('middle-name-2');
-//ChekBox отчества-1
-//input отчества-1
-//ChekBox отчества-2
-//input отчества-2
+let driversElement = document.getElementsByClassName('driver');     //Элементы меню кол-ва водителей
+let driversContainer = document.getElementsByClassName('f5');     //Контейнер меню водителей
+let driversForm = document.getElementsByClassName('f5-e');    //Форма ввода данных водителя c заголовком
+let middleNameCheckOne = document.getElementsByClassName('middle-name-check-1'); //ChekBox отчества-1
+let middleNameCheckTwo = document.getElementsByClassName('middle-name-check-2'); //ChekBox отчества-2
+let middleNameOne = document.getElementsByClassName('middle-name-1'); //input отчества-1
+let middleNameTwo = document.getElementsByClassName('middle-name-2'); //input отчества-2
+
+//Открытие и закрытие меню
+navCloseButton[0].style.display = 'none';
+
+function navOpenFun() {
+    navCloseButton[0].style.display = 'block';
+    navOpenButton[0].style.display = 'none';
+    for (let i = 0; i <= navItem.length; i++) {
+        navItem[i].style.display = 'block';
+    }
+}
+
+function navCloseFun() {
+    navCloseButton[0].style.display = 'none';
+    navOpenButton[0].style.display = 'block';
+    for (let i = 0; i <= navItem.length; i++) {
+        navItem[i].style.display = 'none';
+    }
+}
+//Страхователь = владелец
+function checkedStatusInsuder() {
+    if (statusInsuder.checked === true) {
+        menuInsuder[0].style.display = 'none';
+        insuder[0].style.display = 'none';
+
+    }
+    else {
+        menuInsuder[0].style.display = 'flex';
+        insuder[0].style.display = 'block';
+    }
+}
+//Авто закрытие меню для телефонов
+document.addEventListener("click", function (e) {
+    if (e.target.className == "item-nav" && document.documentElement.clientWidth <= 1000) {
+        for (let i = 0; i <= navItem.length; i++) {
+            navItem[i].style.display = 'none';
+        }
+        navCloseFun();
+    }
+});
+
+document.addEventListener("click", function (e) {
+    let TargetElement = e.target;
+    if (e.target.className == 'driver' || e.target.className == 'driver start-driver' || e.target.className == 'driver end-driver') { //Переключатель меню водителей
+        TargetElement.style.backgroundColor = '#8abe5c';
+        for (let i = 0; i < driversElement.length; i++) {
+            if (TargetElement != driversElement[i]) {
+                driversElement[i].style.backgroundColor = 'white';
+            }
+        }
+
+        /*    //Удалить все формы ввода
+    
+            if ("Не ограниченная" == TargetElement.textContent) {
+                let driversForm2 = document.getElementsByClassName('f5-e');
+                for (let i = 0; i <= driversForm2.length; i++) {
+                    driversForm2[i].remove();
+                }
+            }
+            else {
+                //Добавление форм ввода
+                for (let i = 0; i < Number(TargetElement.textContent); i++) {
+                    for (let j = 0; j < driversForm.length; j++) {
+                        let buffNode = driversForm[j].cloneNode(true);
+                        buffNode.className = "f5-e"
+                        driversContainer[0].append(buffNode);
+                    }
+                }
+            }*/
+        }
+    });
+
+//Плавный скролинг (рабочий копипаст)
+jQuery(document).ready(function () {
+    jQuery("a.scrollto").click(function () {
+        elementClick = jQuery(this).attr("href")
+        destination = jQuery(elementClick).offset().top;
+        jQuery("html:not(:animated),body:not(:animated)").animate({ scrollTop: destination }, 1100);
+        return false;
+    });
+});
+
+//Маска ввода для номера телефона
+$(document).ready(() => {
+    $(".tel").mask("+7 (999) 999-99-99");
+});
 
 /*function readTextFile(file, callback) {
     var rawFile = new XMLHttpRequest();
@@ -32,57 +116,13 @@ readTextFile("question.json", function (text) {
     console.log(data);
 });*/
 
-navCloseButton[0].style.display = 'none';
-
-function navOpenFun() {
-    navCloseButton[0].style.display = 'block';
-    navOpenButton[0].style.display = 'none';
-    for (let i = 0; i <= navItem.length; i++) {
-        navItem[i].style.display = 'block';
-    }
-}
-
-function navCloseFun() {
-    navCloseButton[0].style.display = 'none';
-    navOpenButton[0].style.display = 'block';
-    for (let i = 0; i <= navItem.length; i++) {
-        navItem[i].style.display = 'none';
-    }
-}
-
-function checkedStatusInsuder() {
-    if (statusInsuder.checked === true) {
-        menuInsuder[0].style.display = 'none';
-        insuder[0].style.display = 'none';
-
-    }
-    else {
-        menuInsuder[0].style.display = 'flex';
-        insuder[0].style.display = 'block';
-    }
-}
-
 /*function check() {
 var chbox;
 chbox=document.getElementById('one');
-	if (chbox.checked) {
-		alert('Выбран');
-	}
-	else {
-		alert ('Не выбран');
-	}
+    if (chbox.checked) {
+        alert('Выбран');
+    }
+    else {
+        alert ('Не выбран');
+    }
 }*/
-//Плавный скролинг (рабочий копипаст)
-jQuery(document).ready(function () {
-    jQuery("a.scrollto").click(function () {
-        elementClick = jQuery(this).attr("href")
-        destination = jQuery(elementClick).offset().top;
-        jQuery("html:not(:animated),body:not(:animated)").animate({ scrollTop: destination }, 1100);
-        return false;
-    });
-});
-
-//Мска ввода для номера телефона
-$(document).ready(()=>{
-    $(".tel").mask("+7 (999) 999-99-99");
-});
