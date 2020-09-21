@@ -21,6 +21,7 @@ body {
 a {
   text-decoration: none;
   text-transform: uppercase;
+  color: black;
 }
 a:visited {
   color: black;
@@ -53,18 +54,25 @@ label,
   font-weight: bold;
   font-size: 25px;
 }
-
 input,
 select,
 option {
   height: 40px;
-  width: 300px;
+  width: 240px;
   border-radius: 4px;
   border: 0;
-  padding: 0;
+  padding: 5px;
   margin: 2px;
   background: white;
   font-size: 15pt;
+  box-shadow: 0 0 5px rgba(0,0,0,0.5);
+}
+/*Так как padding не работает на select, 
+для уравнивания высоты и ширины 
+нужно прибавить 2*padding(px) к H и W*/
+select{
+  height: 50px;
+  width: 250px;
 }
 .form-call-order > input {
   width: 100%;
@@ -73,10 +81,9 @@ option {
   background: white;
 }
 input[type="checkbox"] {
-  width: 30px;
-  height: 30px;
+  width: 20px;
+  height: 20px;
   background: white;
-  font-size: 20pt;
 }
 button {
   align-self: center;
@@ -87,6 +94,7 @@ button {
   max-width: 100%;
   background: white;
   font-size: 17pt;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
 }
 
 .back-top {
@@ -147,9 +155,10 @@ button {
 
 .item-main {
   min-height: 100vh;
-  max-width: 100%;
+  width: 100%;
   align-items: center;
   align-content: center;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
 }
 .services {
   width: 100%;
@@ -186,6 +195,7 @@ button {
   padding-top: 10px;
   margin: 30px;
   border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.8);
 }
 .form-action {
   display: flex;
@@ -212,7 +222,6 @@ button {
   justify-content: center;
   align-items: center;
 }
-
 .f1 > h2,
 .f2 > h2,
 .f3 > h2,
@@ -221,7 +230,6 @@ button {
 .number-driver {
   flex-basis: 100%;
 }
-
 .f1-e,
 .f2-e,
 .f3-e,
@@ -230,9 +238,12 @@ button {
   margin-left: 8px;
   margin-right: 8px;
   display: flex;
-  flex-flow: column wrap;
+  flex-flow: column nowrap;
   align-items: center;
   align-content: center;
+}
+.f5-e > input{
+  width: 300px;
 }
 .number-driver {
   display: flex;
@@ -242,12 +253,13 @@ button {
   padding: 0%;
 }
 .driver {
-  background:white;
+  background: white;
   height: 40px;
   width: 40px;
   border: 3px solid white;
   text-align: center;
   font-size: 33px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
 }
 .start-driver {
   border-radius: 10px 0px 0px 10px;
@@ -277,6 +289,7 @@ button {
   background: white;
   padding: 30px;
   border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.7);
 }
 
 .container-call {
@@ -324,6 +337,7 @@ form {
   justify-content: center;
   background: #343a40;
   height: 10vh;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
 }
 .FAQ {
   display: flex;
@@ -394,32 +408,37 @@ details > div {
     font-size: 30pt;
   }
   p {
-    font-size: 17pt;
+    font-size: 15pt;
   }
 
   input,
   select,
   option {
-    height: 40px;
-    width: 400px;
+    height: 70px;
+    width: 220px;
     border-radius: 4px;
     border: 0;
-    padding: 0;
+    padding: 5px;
     margin: 2px;
-    font-size: 12pt;
-  }
-  label,
-  .form-input-date p {
     font-size: 20pt;
+  }
+  /*Так как padding не работает на select, 
+для уравнивания высоты и ширины 
+нужно прибавить 2*padding(px) к H и W*/
+select{
+  height: 80px;
+  width: 230px;
+}
+  .form-input-date p {
+    font-size: 14.5pt;
+  }
+  label{
+    font-size: 14.5pt;
   }
   .form-call-order > input {
     width: 100%;
     padding: 5px;
     max-width: 100%;
-  }
-  input[type="checkbox"] {
-    width: 20px;
-    height: 20px;
   }
   button {
     align-self: center;
@@ -438,9 +457,7 @@ details > div {
     align-items: center;
     align-content: center;
   }
-  .form-call-order {
-    width: 70%;
-  }
+
   .conatiner-number-one {
     width: 100%;
     max-width: 100%;
@@ -500,6 +517,9 @@ details > div {
   .item-nav {
     font-size: 50px;
     margin: 20px;
+  }
+  .form-call-order {
+    width: 70%;
   }
   .form-call-order > p {
     color: white;
