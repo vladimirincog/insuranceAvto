@@ -96,7 +96,7 @@
 
                         <div class="f1-e">
                             <p>Дата начала</p>
-                            <input type="date" name="calendar">
+                            <input type="date" name="start-calendar">
                         </div>
                         <!-- <div class="f1-e">
                             <p>Дата окончания</p>
@@ -123,46 +123,46 @@
                         <h2>Транспортное средство</h2>
                         <div class="f2-e">
                             <p>Гос. знак</p>
-                            <input>
+                            <input name="gos-number">
                         </div>
                         <div class="f2-e">
                             <p>Год выпуска</p>
-                            <select name="YaerCreate">
+                            <select name="yaer-create">
                                 <option>Выберите из списка</option>
                             </select>
                         </div>
 
                         <div class="f2-e">
                             <p>Категория</p>
-                            <select name="Сategory">
+                            <select name="category">
                                 <option>Выберите из списка</option>
                             </select>
                         </div>
                         <div class="f2-e">
                             <p>Марка</p>
-                            <select name="Brand">
+                            <select name="brand">
                                 <option>Выберите из списка</option>
                             </select>
                         </div>
                         <div class="f2-e">
                             <p>Модель</p>
-                            <select name="Model">
+                            <select name="model">
                                 <option>Выберите из списка</option>
                             </select>
                         </div>
                         <div class="f2-e">
                             <p>Модификация</p>
-                            <select name="Modification">
+                            <select name="modification">
                                 <option>Выберите из списка</option>
                             </select>
                         </div>
                         <div class="f2-e">
                             <p>VIN</p>
-                            <input>
+                            <input name='vin'>
                         </div>
                         <div class="f2-e">
                             <p>Тип документа</p>
-                            <select name="TypeCarDoc">
+                            <select name="type-car-doc">
                                 <option>Выберите из списка</option>
                                 <option>ПТС</option>
                                 <option>СТС</option>
@@ -170,11 +170,11 @@
                         </div>
                         <div class="f2-e">
                             <p>Серия</p>
-                            <input>
+                            <input name='serial-doc-car'>
                         </div>
                         <div class="f2-e">
                             <p>Номер</p>
-                            <input>
+                            <input name='number-doc-car'>
                         </div>
                     </div>
 
@@ -185,55 +185,55 @@
                                 страхователем</label></h2>
                         <div class="f3-e">
                             <p>Фамилия</p>
-                            <input>
+                            <input name='surname-owner'>
                         </div>
                         <div class="f3-e">
                             <p>Имя</p>
-                            <input>
+                            <input name='name-owner'>
                         </div>
                         <div class="f3-e">
                             <p>Отчество <input class='middle-name-check-1' type="checkbox">
                                 <label >Без отчества</label></p>
-                            <input class='middle-name-1'>
+                            <input name='middle-owner' class = 'middle-name-1'>
                         </div>
                         <div class="f3-e">
                             <p>Дата рождения</p>
-                            <input type="date" name="calendar">
+                            <input type="date" name="calendar-owner">
                         </div>
                         <div class="f3-e">
                             <p>Тип доукмента</p>
-                            <select name="type-person-doc">
+                            <select name="type-owner-doc">
                                 <option>Выберите из списка</option>
                                 <option>Паспорт РФ</option>
                             </select>
                         </div>
                         <div class="f3-e">
                             <p>Серия</p>
-                            <input>
+                            <input name='serial-doc-owner'>
                         </div>
                         <div class="f3-e">
                             <p>Номер</p>
-                            <input>
+                            <input name='number-doc-owner'>
                         </div>
                         <div class="f3-e">
                             <p>Дата выдачи</p>
-                            <input type="date" name="calendar">
+                            <input type="date" name="date-doc-owner">
                         </div>
                         <div class="f3-e">
                             <p>Выдан</p>
-                            <input class="issued" placeholder="Код или наименование">
+                            <input name="issued-doc-owner" placeholder="Код или наименование">
                         </div>
                         <div class="f3-e">
                             <p>Адресс регистрации</p>
-                            <input>
+                            <input name="adress-doc-owner">
                         </div>
                         <div class="f3-e">
                             <p>Телефон</p>
-                            <input class="tel" placeholder="+7(999)999-99-99">
+                            <input class="tel" name="tel-owner" placeholder="+7(999)999-99-99">
                         </div>
                         <div class="f3-e">
                             <p>E-mail</p>
-                            <input placeholder="ivan2000@mail.ru">
+                            <input name="email-owner" placeholder="ivan2000@mail.ru">
                         </div>
                     </div>
 
@@ -241,53 +241,53 @@
                         <h2 class='menu-4'> Страхователь</h2>
                         <div class="f4-e">
                             <p>Фамилия</p>
-                            <input>
+                            <input name='surname-insuder'>
                         </div>
                         <div class="f4-e">
                             <p>Имя</p>
-                            <input>
+                            <input name='name-insuder'>
                         </div>
                         <div class="f4-e">
                             <p>Отчество <input class='middle-name-check-2' type="checkbox">
                                 <label >Без отчества</label></p>
-                            <input class='middle-name-2'>
+                            <input class='middle-name-2' name='middle-insuder'>
                         </div>
                         <div class="f4-e">
                             <p>Дата рождения</p>
-                            <input type="date" name="calendar">
+                            <input type="date" name="calendar-insuder">
                         </div>
                         <div class="f4-e">
                             <p>Тип доукмента</p>
-                            <select name="type-person-doc">
+                            <select name="type-insuder-doc">
                                 <option>Выберите из списка</option>
                                 <option>Паспорт РФ</option>
                             </select>
                         </div>
                         <div class="f4-e">
                             <p>Серия</p>
-                            <input>
+                            <input name='serial-doc-insuderr'>
                         </div>
                         <div class="f4-e">
                             <p>Номер</p>
-                            <input>
+                            <input name='number-doc-insuderr'>
                         </div>
                         <div class="f4-e">
                             <p>Дата выдачи</p>
-                            <input type="date" name="calendar">
+                            <input type="date" name="date-doc-insuderr">
                         </div>
                         <div class="f4-e">
                             <p>Выдан</p>
-                            <input class="issued" placeholder="Код или наименование">
+                            <input class="issued" name="issued-doc-insuder" placeholder="Код или наименование">
                         </div>
                         <div class="f4-e">
                             <p>Адресс регистрации</p>
-                            <input>
+                            <input name="adress-doc-insuder">
                         </div>
                         <div class="f4-e">
                             <p>Телефон</p>
-                            <input class="tel" placeholder="+7(999)999-99-99">
+                            <input class="tel" name="tel-insuder" placeholder="+7(999)999-99-99">
                         </div>
-                        <div class="f4-e">
+                        <div class="f4-e" name="email-insuder">
                             <p>E-mail</p>
                             <input placeholder="ivan2000@mail.ru">
                         </div>
@@ -305,28 +305,28 @@
                         </div>
                         <div class="f5-e">
                             <p>Фамилия</p>
-                            <input>
+                            <input name='driver-surname'>
                         </div>
                         <div class="f5-e">
                             <p>Имя</p>
-                            <input>
+                            <input name='driver-name'>
                         </div>
                         <div class="f5-e">
                             <p>Отчество <input id='patronymic' type="checkbox">
                                 <label>Без отчества</label></p>
-                            <input>
+                            <input name='driver-middle-1'>
                         </div>
                         <div class="f5-e">
                             <p>Дата рождения</p>
-                            <input type="date" name="calendar">
+                            <input type="date" name="driver-calendar">
                         </div>
                         <div class="f5-e">
                             <p>Водительское удостоверение</p>
-                            <input>
+                            <input placeholder="99 АА 999999" name="driver-vu">
                         </div>
                         <div class="f5-e">
                             <p>Стаж (лет)</p>
-                            <input>
+                            <input name="driver-experience">
                         </div>
                     </div>
                     <button>Отправить</button>
