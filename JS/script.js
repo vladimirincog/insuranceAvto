@@ -6,8 +6,7 @@ let statusInsuder = document.getElementById('status-insuder');          //Cта�
 let menuInsuder = document.getElementsByClassName('f4');                //Меню данных страхователя
 let insuder = document.getElementsByClassName('menu-4');                //Заголовок меню данных страхователя
 let driversElement = document.getElementsByClassName('driver');     //Элементы меню кол-ва водителей
-let driversContainer = document.getElementsByClassName('f5');     //Контейнер меню водителей
-let driversForm = document.getElementsByClassName('f5-e');    //Форма ввода данных водителя c заголовком
+let driversForm = document.getElementsByClassName('frame-driver'); //Форма ввода водятеля
 let middleNameCheckOne = document.getElementsByClassName('middle-name-check-1'); //ChekBox отчества-1
 let middleNameCheckTwo = document.getElementsByClassName('middle-name-check-2'); //ChekBox отчества-2
 let middleNameOne = document.getElementsByClassName('middle-name-1'); //input отчества-1
@@ -55,6 +54,8 @@ document.addEventListener("click", function (e) {
 
 document.addEventListener("click", function (e) {
     let TargetElement = e.target;
+    
+
     if (e.target.className == 'driver' || e.target.className == 'driver start-driver' || e.target.className == 'driver end-driver') { //Переключатель меню водителей
         TargetElement.style.backgroundColor = '#8abe5c';
         for (let i = 0; i < driversElement.length; i++) {
@@ -62,27 +63,23 @@ document.addEventListener("click", function (e) {
                 driversElement[i].style.backgroundColor = 'white';
             }
         }
-
-        /*    //Удалить все формы ввода
-    
-            if ("Не ограниченная" == TargetElement.textContent) {
-                let driversForm2 = document.getElementsByClassName('f5-e');
-                for (let i = 0; i <= driversForm2.length; i++) {
-                    driversForm2[i].remove();
-                }
-            }
-            else {
-                //Добавление форм ввода
-                for (let i = 0; i < Number(TargetElement.textContent); i++) {
-                    for (let j = 0; j < driversForm.length; j++) {
-                        let buffNode = driversForm[j].cloneNode(true);
-                        buffNode.className = "f5-e"
-                        driversContainer[0].append(buffNode);
-                    }
-                }
-            }*/
+        for(let i=0; i>=driversForm.length; i++){
+            driversForm[i].style.display = 'none';
         }
-    });
+        if ("Не ограниченная" == TargetElement.textContent) {
+            
+            for(let i=0; i>=driversForm.length; i++){
+                driversForm[i].style.display = 'none';
+            }
+        }
+
+        else {
+            for (let i = 0; i < Number(TargetElement.textContent)-1; i++) {
+                driversForm[i].style.display = 'flex';
+            }
+        }
+    }
+});
 
 //Плавный скролинг (рабочий копипаст)
 jQuery(document).ready(function () {
