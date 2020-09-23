@@ -7,10 +7,8 @@ let menuInsuder = document.getElementsByClassName('f4');                //Мен
 let insuder = document.getElementsByClassName('menu-4');                //Заголовок меню данных страхователя
 let driversElement = document.getElementsByClassName('driver');     //Элементы меню кол-ва водителей
 let driversForm = document.getElementsByClassName('frame-driver'); //Форма ввода водятеля
-let middleNameCheckOne = document.getElementsByClassName('middle-name-check-1'); //ChekBox отчества-1
-let middleNameCheckTwo = document.getElementsByClassName('middle-name-check-2'); //ChekBox отчества-2
-let middleNameOne = document.getElementsByClassName('middle-name-1'); //input отчества-1
-let middleNameTwo = document.getElementsByClassName('middle-name-2'); //input отчества-2
+let middleNameCheck = document.getElementsByClassName('middle-name-check'); //ChekBox отчества
+let middleNameForm = document.getElementsByClassName('middle-name'); //input отчества
 
 //Открытие и закрытие меню
 navCloseButton[0].style.display = 'none';
@@ -94,7 +92,16 @@ jQuery(document).ready(function () {
 $(document).ready(() => {
     $(".tel").mask("+7 (999) 999-99-99");
 });
-
+//Проверка checkboxs-отчества
+function check() {
+    for(let i=0; i<=middleNameCheck.length; i++)
+    if (middleNameCheck[i].checked) {
+        middleNameForm[i].style.display = 'none'
+    }
+    else {
+        middleNameForm[i].style.display = 'flex'
+    }
+}
 /*function readTextFile(file, callback) {
     var rawFile = new XMLHttpRequest();
     rawFile.overrideMimeType("application/json");
@@ -112,13 +119,5 @@ readTextFile("question.json", function (text) {
     console.log(data);
 });*/
 
-/*function check() {
-var chbox;
-chbox=document.getElementById('one');
-    if (chbox.checked) {
-        alert('Выбран');
-    }
-    else {
-        alert ('Не выбран');
-    }
-}*/
+
+
