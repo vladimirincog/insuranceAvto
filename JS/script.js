@@ -54,8 +54,6 @@ document.addEventListener("click", function (e) {
 
 document.addEventListener("click", function (e) {
     let TargetElement = e.target;
-    
-
     if (e.target.className == 'driver' || e.target.className == 'driver start-driver' || e.target.className == 'driver end-driver') { //Переключатель меню водителей
         TargetElement.style.backgroundColor = '#8abe5c';
         for (let i = 0; i < driversElement.length; i++) {
@@ -63,19 +61,20 @@ document.addEventListener("click", function (e) {
                 driversElement[i].style.backgroundColor = 'white';
             }
         }
-        for(let i=0; i>=driversForm.length; i++){
-            driversForm[i].style.display = 'none';
-        }
+
         if ("Не ограниченная" == TargetElement.textContent) {
             
-            for(let i=0; i>=driversForm.length; i++){
+            for(let i=0; i<=driversForm.length; i++){
                 driversForm[i].style.display = 'none';
             }
         }
 
         else {
-            for (let i = 0; i < Number(TargetElement.textContent)-1; i++) {
-                driversForm[i].style.display = 'flex';
+            for (let i = 0; i <= driversForm.length; i++) {
+
+                if(Number(TargetElement.textContent)-1 >= i){driversForm[i].style.display = 'flex';}
+                else{driversForm[i].style.display = 'none';}
+                
             }
         }
     }
