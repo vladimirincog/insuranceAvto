@@ -223,6 +223,8 @@ button {
   justify-content: center;
   align-items: center;
 }
+.frame-driver{display: none;}
+
 .f1 > h2,
 .f2 > h2,
 .f3 > h2,
