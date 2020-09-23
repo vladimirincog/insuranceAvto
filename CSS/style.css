@@ -216,7 +216,8 @@ button {
 .f2,
 .f3,
 .f4,
-.f5 {
+.f5,
+.frame-driver {
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
@@ -227,7 +228,8 @@ button {
 .f3 > h2,
 .f4 > h2,
 .f5 > h2,
-.number-driver {
+.number-driver, 
+h3 {
   flex-basis: 100%;
 }
 .f1-e,
