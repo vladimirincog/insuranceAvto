@@ -10,9 +10,20 @@ let driversForm = document.getElementsByClassName('frame-driver'); //Форма 
 let middleNameCheck = document.getElementsByClassName('middle-name-check'); //ChekBox отчества
 let middleNameForm = document.getElementsByClassName('middle-name'); //input отчества
 
-//Открытие и закрытие меню
 navCloseButton[0].style.display = 'none';
+driversForm[0].style.display = 'flex';
 
+//Авто закрытие меню для телефонов
+/*document.addEventListener("click", function (e) {
+    if (e.target.className == "item-nav" && document.documentElement.clientWidth <= 1000) {
+        for (let i = 0; i <= navItem.length; i++) {
+            navItem[i].style.display = 'none';
+        }
+        navCloseFun();
+    }
+});*/
+
+//Открытие и закрытие меню
 function navOpenFun() {
     navCloseButton[0].style.display = 'block';
     navOpenButton[0].style.display = 'none';
@@ -40,15 +51,7 @@ function checkedStatusInsuder() {
         insuder[0].style.display = 'block';
     }
 }
-//Авто закрытие меню для телефонов
-document.addEventListener("click", function (e) {
-    if (e.target.className == "item-nav" && document.documentElement.clientWidth <= 1000) {
-        for (let i = 0; i <= navItem.length; i++) {
-            navItem[i].style.display = 'none';
-        }
-        navCloseFun();
-    }
-});
+
 
 document.addEventListener("click", function (e) {
     let TargetElement = e.target;
@@ -96,10 +99,13 @@ $(document).ready(() => {
 function check() {
     for(let i=0; i<=middleNameCheck.length; i++)
     if (middleNameCheck[i].checked) {
-        middleNameForm[i].style.display = 'none'
+        middleNameForm[i].setAttribute("disabled", "true");
+        middleNameForm[i].style.backgroundColor = ' #e7e7e7';
     }
     else {
-        middleNameForm[i].style.display = 'flex'
+        middleNameForm[i].removeAttribute("disabled");
+        middleNameForm[i].style.backgroundColor = 'white';
+        
     }
 }
 /*function readTextFile(file, callback) {
