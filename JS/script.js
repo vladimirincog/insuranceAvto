@@ -1,4 +1,5 @@
 
+"use strict";                                                          //ES для всего файла
 let navItem = document.getElementsByClassName('item-nav');              //Элементы меню
 let navOpenButton = document.getElementsByClassName('navOpenButton');   //Стрелка открытия меню
 let navCloseButton = document.getElementsByClassName('navCloseButton'); //Стрелка закрытия меню
