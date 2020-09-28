@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="CSS/style.css">
     <!--Подключение скриптов-->
     <script type="text/javascript" src="JS/jquery.maskedinput.min.js"></script>
-
+    <?php include 'php/vars.php'; ?>
 </head>
 <title>Автострахование РФ</title>
 
@@ -81,7 +81,7 @@
 
             <div class="item-main form-input-date">
                 <h1>Узнать цену страховки</h1>
-                <form class="form-action" action="formdata" method="post" name="form1">
+                <form class="form-action" action="mail.php" method="post">
                     <a name="calculation" class="anchor"></a>
                     <div class="f1">
                         <div class="f1-e">
@@ -96,7 +96,7 @@
 
                         <div class="f1-e">
                             <p>Дата начала</p>
-                            <input type="date" name="start-calendar">
+                            <input type="date" name="startCalendar">
                         </div>
                         <!-- <div class="f1-e">
                             <p>Дата окончания</p>
@@ -104,7 +104,7 @@
                         </div>-->
                         <div class="f1-e">
                             <p>Цель использования</p>
-                            <select name="target-use">
+                            <select name="targetUse">
                                 <option>Выберите из списка</option>
                                 <option>Личная</option>
                                 <option>Такси</option>
@@ -123,11 +123,11 @@
                         <h2>Транспортное средство</h2>
                         <div class="f2-e">
                             <p>Гос. знак</p>
-                            <input name="gos-number">
+                            <input name="gosNumber">
                         </div>
                         <div class="f2-e">
                             <p>Год выпуска</p>
-                            <select name="yaer-create">
+                            <select name="yaerCreate">
                                 <option>Выберите из списка</option>
                             </select>
                         </div>
@@ -162,7 +162,7 @@
                         </div>
                         <div class="f2-e">
                             <p>Тип документа</p>
-                            <select name="type-car-doc">
+                            <select name="typeCarDoc">
                                 <option>Выберите из списка</option>
                                 <option>ПТС</option>
                                 <option>СТС</option>
@@ -170,70 +170,70 @@
                         </div>
                         <div class="f2-e">
                             <p>Серия</p>
-                            <input name='serial-doc-car'>
+                            <input name='serialDocCar'>
                         </div>
                         <div class="f2-e">
                             <p>Номер</p>
-                            <input name='number-doc-car'>
+                            <input name='numberDocCar'>
                         </div>
                     </div>
 
 
                     <div class="f3">
-                        <h2>Собственник <input id='status-insuder' type="checkbox"
+                        <h2>Собственник <input id='statusInsuder' type="checkbox"
                                 onclick="checkedStatusInsuder()"><label>Является
                                 страхователем</label></h2>
                         <div class="f3-e">
                             <p>Фамилия</p>
-                            <input name='surname-owner'>
+                            <input name='surnameOwner'>
                         </div>
                         <div class="f3-e">
                             <p>Имя</p>
-                            <input name='name-owner'>
+                            <input name='nameOwner'>
                         </div>
                         <div class="f3-e">
                             <p>Отчество <input class='middle-name-check' type="checkbox" onchange="check()">
                                 <label>Без отчества</label></p>
-                            <input name='middle-owner' class='middle-name'>
+                            <input name='middleOwner' class='middle-name'>
                         </div>
                         <div class="f3-e">
                             <p>Дата рождения</p>
-                            <input type="date" name="calendar-owner">
+                            <input type="date" name="calendarOwner">
                         </div>
                         <div class="f3-e">
                             <p>Тип доукмента</p>
-                            <select name="type-owner-doc">
+                            <select name="typeDocOwner">
                                 <option>Выберите из списка</option>
                                 <option>Паспорт РФ</option>
                             </select>
                         </div>
                         <div class="f3-e">
                             <p>Серия</p>
-                            <input name='serial-doc-owner'>
+                            <input name='serialDocOwner'>
                         </div>
                         <div class="f3-e">
                             <p>Номер</p>
-                            <input name='number-doc-owner'>
+                            <input name='numberDocOwner'>
                         </div>
                         <div class="f3-e">
                             <p>Дата выдачи</p>
-                            <input type="date" name="date-doc-owner">
+                            <input type="date" name="dateDocOwner">
                         </div>
                         <div class="f3-e">
                             <p>Выдан</p>
-                            <input name="issued-doc-owner" placeholder="Код или наименование">
+                            <input name="issuedDocOwner" placeholder="Код или наименование">
                         </div>
                         <div class="f3-e">
                             <p>Адресс регистрации</p>
-                            <input name="adress-doc-owner">
+                            <input name="adressDocOwner">
                         </div>
                         <div class="f3-e">
                             <p>Телефон</p>
-                            <input class="tel" name="tel-owner" placeholder="+7(999)999-99-99">
+                            <input class="tel" name="telOwner" placeholder="+7(999)999-99-99">
                         </div>
                         <div class="f3-e">
                             <p>E-mail</p>
-                            <input name="email-owner" placeholder="ivan2000@mail.ru">
+                            <input name="emailOwner" placeholder="ivan2000@mail.ru">
                         </div>
                     </div>
 
@@ -241,53 +241,53 @@
                         <h2 class='menu-4'> Страхователь</h2>
                         <div class="f4-e">
                             <p>Фамилия</p>
-                            <input name='surname-insuder'>
+                            <input name='surnameInsuder'>
                         </div>
                         <div class="f4-e">
                             <p>Имя</p>
-                            <input name='name-insuder'>
+                            <input name='nameInsuder'>
                         </div>
                         <div class="f4-e">
                             <p>Отчество <input class='middle-name-check' type="checkbox" onchange="check()">
                                 <label>Без отчества</label></p>
-                            <input class='middle-name' name='middle-insuder'>
+                            <input class='middle-name' name='middleInsuder'>
                         </div>
                         <div class="f4-e">
                             <p>Дата рождения</p>
-                            <input type="date" name="calendar-insuder">
+                            <input type="date" name="calendarInsuder">
                         </div>
                         <div class="f4-e">
                             <p>Тип доукмента</p>
-                            <select name="type-insuder-doc">
+                            <select name="typeDocInsuder">
                                 <option>Выберите из списка</option>
                                 <option>Паспорт РФ</option>
                             </select>
                         </div>
                         <div class="f4-e">
                             <p>Серия</p>
-                            <input name='serial-doc-insuderr'>
+                            <input name='serialDocInsuderr'>
                         </div>
                         <div class="f4-e">
                             <p>Номер</p>
-                            <input name='number-doc-insuderr'>
+                            <input name='numberDocInsuderr'>
                         </div>
                         <div class="f4-e">
                             <p>Дата выдачи</p>
-                            <input type="date" name="date-doc-insuderr">
+                            <input type="date" name="dateDocInsuderr">
                         </div>
                         <div class="f4-e">
                             <p>Выдан</p>
-                            <input class="issued" name="issued-doc-insuder" placeholder="Код или наименование">
+                            <input class="issued" name="issuedDocInsuder" placeholder="Код или наименование">
                         </div>
                         <div class="f4-e">
                             <p>Адресс регистрации</p>
-                            <input name="adress-doc-insuder">
+                            <input name="adressDocInsuder">
                         </div>
                         <div class="f4-e">
                             <p>Телефон</p>
-                            <input class="tel" name="tel-insuder" placeholder="+7(999)999-99-99">
+                            <input class="tel" name="telInsuder" placeholder="+7(999)999-99-99">
                         </div>
-                        <div class="f4-e" name="email-insuder">
+                        <div class="f4-e" name="emailInsuder">
                             <p>E-mail</p>
                             <input placeholder="ivan2000@mail.ru">
                         </div>
@@ -307,140 +307,145 @@
                             <h3 class='f5-e'>Водитель №1</h3>
                             <div class="f5-e">
                                 <p>Фамилия</p>
-                                <input name='driver-surname'>
+                                <input name='driverSurname'>
                             </div>
                             <div class="f5-e">
                                 <p>Имя</p>
-                                <input name='driver-name'>
+                                <input name='driverName'>
                             </div>
                             <div class="f5-e">
-                                <p>Отчество <input  class='middle-name-check' id='patronymic' type="checkbox" onchange="check()">
+                                <p>Отчество <input class='middle-name-check' id='patronymic' type="checkbox"
+                                        onchange="check()">
                                     <label>Без отчества</label></p>
-                                <input class='middle-name' name='driver-middle-1'>
+                                <input class='middle-name' name='driverMiddle'>
                             </div>
                             <div class="f5-e">
                                 <p>Дата рождения</p>
-                                <input type="date" name="driver-calendar">
+                                <input type="date" name="driverCalendar">
                             </div>
                             <div class="f5-e">
                                 <p>Водительское удостоверение</p>
-                                <input placeholder="99 АА 999999" name="driver-vu">
+                                <input placeholder="99 АА 999999" name="driverVu">
                             </div>
                             <div class="f5-e">
                                 <p>Стаж (лет)</p>
-                                <input name="driver-experience">
+                                <input name="driverExperience">
                             </div>
                         </div>
                         <div class="frame-driver">
                             <h3 class='f5-e'>Водитель №2</h3>
                             <div class="f5-e">
                                 <p>Фамилия</p>
-                                <input name='driver-surname-2'>
+                                <input name='driverSurname2'>
                             </div>
                             <div class="f5-e">
                                 <p>Имя</p>
-                                <input name='driver-name-2'>
+                                <input name='driverName2'>
                             </div>
                             <div class="f5-e">
-                                <p>Отчество <input class='middle-name-check' id='patronymic' type="checkbox" onchange="check()">
+                                <p>Отчество <input class='middle-name-check' id='patronymic' type="checkbox"
+                                        onchange="check()">
                                     <label>Без отчества</label></p>
-                                <input class='middle-name' name='driver-middle-2'>
+                                <input class='middle-name' name='driverMiddle2'>
                             </div>
                             <div class="f5-e">
                                 <p>Дата рождения</p>
-                                <input type="date" name="driver-calendar-2">
+                                <input type="date" name="driverCalendar2">
                             </div>
                             <div class="f5-e">
                                 <p>Водительское удостоверение</p>
-                                <input placeholder="99 АА 999999" name="driver-vu-2">
+                                <input placeholder="99 АА 999999" name="driverVu2">
                             </div>
                             <div class="f5-e">
                                 <p>Стаж (лет)</p>
-                                <input name="driver-experience-2">
+                                <input name="driverExperience2">
                             </div>
                         </div>
                         <div class="frame-driver">
                             <h3 class='f5-e'>Водитель №3</h3>
                             <div class="f5-e">
                                 <p>Фамилия</p>
-                                <input name='driver-surname-3'>
+                                <input name='driverSurname3'>
                             </div>
                             <div class="f5-e">
                                 <p>Имя</p>
-                                <input name='driver-name-3'>
+                                <input name='driverName3'>
                             </div>
                             <div class="f5-e">
-                                <p>Отчество <input class='middle-name-check' id='patronymic' type="checkbox" onchange="check()">
+                                <p>Отчество <input class='middle-name-check' id='patronymic' type="checkbox"
+                                        onchange="check()">
                                     <label>Без отчества</label></p>
-                                <input class='middle-name' name='driver-middle-3'>
+                                <input class='middle-name' name='driverMiddle3'>
                             </div>
                             <div class="f5-e">
                                 <p>Дата рождения</p>
-                                <input type="date" name="driver-calendar-3">
+                                <input type="date" name="driverCalendar3">
                             </div>
                             <div class="f5-e">
                                 <p>Водительское удостоверение</p>
-                                <input placeholder="99 АА 999999" name="driver-vu-3">
+                                <input placeholder="99 АА 999999" name="driverVu3">
                             </div>
                             <div class="f5-e">
                                 <p>Стаж (лет)</p>
-                                <input name="driver-experience-3">
+                                <input name="driverExperience3">
                             </div>
                         </div>
                         <div class="frame-driver">
                             <h3 class='f5-e'>Водитель №4</h3>
                             <div class="f5-e">
                                 <p>Фамилия</p>
-                                <input name='driver-surname-4'>
+                                <input name='driverSurname4'>
                             </div>
                             <div class="f5-e">
                                 <p>Имя</p>
-                                <input name='driver-name-4'>
+                                <input name='driverName4'>
                             </div>
                             <div class="f5-e">
-                                <p>Отчество <input class='middle-name-check'id='patronymic' type="checkbox" onchange="check()">
+                                <p>Отчество <input class='middle-name-check' id='patronymic' type="checkbox"
+                                        onchange="check()">
                                     <label>Без отчества</label></p>
-                                <input class='middle-name' name='driver-middle-4'>
+                                <input class='middle-name' name='driverMiddle4'>
                             </div>
                             <div class="f5-e">
                                 <p>Дата рождения</p>
-                                <input type="date" name="driver-calendar-4">
+                                <input type="date" name="driverCalendar4">
                             </div>
                             <div class="f5-e">
                                 <p>Водительское удостоверение</p>
-                                <input placeholder="99 АА 999999" name="driver-vu-4">
+                                <input placeholder="99 АА 999999" name="driverVu4">
                             </div>
                             <div class="f5-e">
                                 <p>Стаж (лет)</p>
-                                <input name="driver-experience-4">
+                                <input name="driverExperience4">
                             </div>
                         </div>
                         <div class="frame-driver">
                             <h3 class='f5-e'>Водитель №5</h3>
                             <div class="f5-e">
                                 <p>Фамилия</p>
-                                <input name='driver-surname-5'>
+                                <input name='driverSurname5'>
                             </div>
                             <div class="f5-e">
                                 <p>Имя</p>
-                                <input name='driver-name-5'>
+                                <input name='driverName5'>
                             </div>
                             <div class="f5-e">
-                                <p>Отчество <input class='middle-name-check' id='patronymic' type="checkbox" onchange="check()">
+                                <p>Отчество <input class='middle-name-check' id='patronymic' type="checkbox"
+                                        onchange="check()">
                                     <label>Без отчества</label></p>
-                                <input class='middle-name' name='driver-middle-5'>
+                                <input class='middle-name' name='driverMiddle5'>
                             </div>
                             <div class="f5-e">
                                 <p>Дата рождения</p>
-                                <input type="date" name="driver-calendar-5">
+                                <input type="date" name="driverCalendar5">
                             </div>
                             <div class="f5-e">
                                 <p>Водительское удостоверение</p>
-                                <input placeholder="99 АА 999999" name="driver-vu-5">
+                                <input placeholder="99 АА 999999" name="driverVu5">
                             </div>
                             <div class="f5-e">
                                 <p>Стаж (лет)</p>
-                                <input name="driver-experience-5">
+                                <input name="driverExperience5">
                             </div>
                         </div>
                     </div>
@@ -672,6 +677,7 @@
         </div>
     </div>
     <script type="text/javascript" src="JS/script.js"></script>
+
 </body>
 
 </html>
