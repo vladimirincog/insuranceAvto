@@ -79,5 +79,9 @@ $driverCalendar5 = $_POST['driverCalendar5'];
 $driverVu5 = $_POST['driverVu5'];
 $driverExperience5 = $_POST['driverExperience5'];
 
-echo $period;
+mail("vladimirincog@gmail.com",
+ "Заявка с сайта",
+  "Период".$period. "\n".
+   "Дата начала" .$startCalendar ,
+    "text/plain" );
 ?>
