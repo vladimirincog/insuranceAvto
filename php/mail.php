@@ -81,7 +81,8 @@ $driverExperience5 = $_POST['driverExperience5'];
 
 mail("vladimirincog@gmail.com",
  "Заявка с сайта",
-  "Период".$period. "\n".
-   "Дата начала" .$startCalendar ,
+  "Период: ".$period. "\n".
+   "Дата начала: " .$startCalendar. "\n".
+   "Цель использования: " .$targetUse,
     "text/plain" );
 ?>
