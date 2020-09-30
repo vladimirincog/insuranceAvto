@@ -327,8 +327,12 @@
                                 <input placeholder="99 АА 999999" name="driverVu">
                             </div>
                             <div class="f5-e">
-                                <p>Стаж (лет)</p>
-                                <input name="driverExperience">
+                                <p>Дата выдачи</p>
+                                <input type="date" name="driverVuDate">
+                            </div>
+                            <div class="f5-e">
+                                <p>Стаж</p>
+                                <input type="date" name="driverExperience">
                             </div>
                         </div>
                         <div class="frame-driver">
@@ -356,8 +360,12 @@
                                 <input placeholder="99 АА 999999" name="driverVu2">
                             </div>
                             <div class="f5-e">
-                                <p>Стаж (лет)</p>
-                                <input name="driverExperience2">
+                                <p>Дата выдачи</p>
+                                <input type="date" name="driverVuDate2">
+                            </div>
+                            <div class="f5-e">
+                                <p>Стаж</p>
+                                <input type="date" name="driverExperience2">
                             </div>
                         </div>
                         <div class="frame-driver">
@@ -385,8 +393,12 @@
                                 <input placeholder="99 АА 999999" name="driverVu3">
                             </div>
                             <div class="f5-e">
-                                <p>Стаж (лет)</p>
-                                <input name="driverExperience3">
+                                <p>Дата выдачи</p>
+                                <input type="date" name="driverVuDate3">
+                            </div>
+                            <div class="f5-e">
+                                <p>Стаж</p>
+                                <input type="date" name="driverExperience3">
                             </div>
                         </div>
                         <div class="frame-driver">
@@ -414,8 +426,12 @@
                                 <input placeholder="99 АА 999999" name="driverVu4">
                             </div>
                             <div class="f5-e">
-                                <p>Стаж (лет)</p>
-                                <input name="driverExperience4">
+                                <p>Дата выдачи</p>
+                                <input type="date" name="driverVuDate4">
+                            </div>
+                            <div class="f5-e">
+                                <p>Стаж</p>
+                                <input type="date" name="driverExperience4">
                             </div>
                         </div>
                         <div class="frame-driver">
@@ -443,8 +459,12 @@
                                 <input placeholder="99 АА 999999" name="driverVu5">
                             </div>
                             <div class="f5-e">
-                                <p>Стаж (лет)</p>
-                                <input name="driverExperience5">
+                                <p>Дата выдачи</p>
+                                <input type="date" name="driverVuDate5">
+                            </div>
+                            <div class="f5-e">
+                                <p>Стаж</p>
+                                <input type="date" name="driverExperience5">
                             </div>
                         </div>
                     </div>
@@ -651,12 +671,12 @@
 
             <div class="item-main container-call"><a name="call" class="anchor"></a>
                 <h1>Заказ звонка</h1>
-                <form class="form-call-order" action="formdata" method="post" name="form1">
+                <form class="form-call-order" action="callForm" method="post" name="form1">
 
                     <P class="item-call" type="text">Имя</P>
-                    <input class="call-order" placeholder="Иван">
+                    <input name="callName" class="call-order" placeholder="Иван">
                     <p class="item-call">Номер телефона</p>
-                    <input class="call-order tel" type="tel" placeholder="+7(999)999-99-99">
+                    <input name="callTel" class="call-order tel" type="tel" placeholder="+7(999)999-99-99">
                     <br>
                     <button class="item-call">Заказать</button>
                 </form>
