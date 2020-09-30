@@ -192,4 +192,5 @@ function callForm()
             "\nИмя: " . $callTel,
         "Данные для звонка"
     );
+    header("Location: https://insuranceavto.000webhostapp.com/");
 }
