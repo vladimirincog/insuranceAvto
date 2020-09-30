@@ -109,6 +109,18 @@ function check() {
         
     }
 }
+
+//Валидация формы
+/*
+$('#send').click(function() {
+    if ($('#whence').val().length < 1 || $('#where').val().length < 1 || $('#date').val().length < 1) {
+      alert('Заполните все поля');
+    } else {
+      $('#form').submit();
+    }
+  });
+*/
+
 /*function readTextFile(file, callback) {
     var rawFile = new XMLHttpRequest();
     rawFile.overrideMimeType("application/json");
