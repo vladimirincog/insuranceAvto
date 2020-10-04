@@ -5,7 +5,7 @@ $startCalendar = $_POST['startCalendar'];
 $targetUse = $_POST['targetUse'];
 $gosNumber = $_POST['gosNumber'];
 $yaerCreate = $_POST['yaerCreate'];
-$category = $_POST['category'];
+//$category = $_POST['category'];
 $model = $_POST['model'];
 $brand = $_POST['brand'];
 $modification = $_POST['modification'];
@@ -38,9 +38,9 @@ $nameInsuder = $_POST['nameInsuder'];
 $middleInsuder = $_POST['middleInsuder'];
 $calendarInsuder = $_POST['calendarInsuder'];
 $typeDocInsuder = $_POST['typeDocInsuder'];
-$serialDocInsuderr = $_POST['serialDocInsuderr'];
-$numberDocInsuderr = $_POST['numberDocInsuderr'];
-$dateDocInsuderr = $_POST['dateDocInsuderr'];
+$serialDocInsuder = $_POST['serialDocInsuder'];
+$numberDocInsuder = $_POST['numberDocInsuder'];
+$dateDocInsuder = $_POST['dateDocInsuder'];
 $issuedDocInsuder = $_POST['issuedDocInsuder'];
 $adressDocInsuder = $_POST['adressDocInsuder'];
 $telInsuder = $_POST['telInsuder'];
@@ -177,9 +177,9 @@ mail(
         "\nДата рождения: " . $driverCalendar5 .
         "\nНомер ВУ: " . $driverVu5 .
         "\nДата выдачи ВУ: " . $driverVuDate5 .
-        "\nСаж: " . $driverExperience5 .
+        "\nСаж: " . $driverExperience5,
 
-        "Данные для страховки"
+    "Данные для страховки"
 );
 
-header("Location: https://insuranceavto.000webhostapp.com/");
+echo '<script>location.replace("../index.html");</script>'; exit;
