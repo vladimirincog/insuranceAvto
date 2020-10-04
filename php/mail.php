@@ -88,7 +88,7 @@ $driverVuDate5 = $_POST['driverVuDate5'];
 $driverExperience5 = $_POST['driverExperience5'];
 
 mail(
-    "vladimirincog@gmail.com",
+    "9092345673@mail.ru",
     "Заявка с сайта",
     "АВТОМОБИЛЬ" . "\n" .
         "Период: " . $period . "\n" .
