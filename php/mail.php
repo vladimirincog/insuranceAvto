@@ -182,3 +182,4 @@ mail(
         "Данные для страховки"
 );
 
+header("Location: https://insuranceavto.000webhostapp.com/");
