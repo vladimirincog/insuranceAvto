@@ -334,17 +334,7 @@ form {
   color: black;
 }
 
-.container-footer {
-  display: flex;
-  color: white;
-  font-size: 25px;
-  flex-flow: row wrap;
-  align-content: center;
-  justify-content: center;
-  background: #343a40;
-  height: 10vh;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-}
+
 .FAQ {
   display: flex;
   flex-flow: column nowrap;
@@ -535,6 +525,31 @@ details > div {
   .end-driver {
     width: 230px;
   }
+}
+.container-footer {
+  display: flex;
+  color: white;
+  font-size: 25px;
+  flex-flow: row wrap;
+  align-content: center;
+  justify-content: center;
+  background: rgb(243, 243, 243);
+  padding: 30px;
+  /*background: #343a40;*/
+  height: 100%;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+.item-footer{
+  text-align: center;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    justify-content: center;
+}
+.item-footer>img{
+  padding: 40px;
+  max-width: 150px;
 }
 @media (min-width: 1000px) {
   .navOpenButton {
