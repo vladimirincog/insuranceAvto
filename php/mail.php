@@ -182,4 +182,5 @@ mail(
     "Данные для страховки"
 );
 
-echo '<script>location.replace("../index.html");</script>'; exit;
+echo '<script>location.replace("../index.html");
+alert("Идет расчет страховки! Мы перезвоним или напишем Вам в ближайшее время!");</script>'; exit;
