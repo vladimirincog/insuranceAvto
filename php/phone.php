@@ -9,4 +9,5 @@ mail(
         "\nИмя: " . $callName,
     "Данные для звонка"
 );
-echo '<script>location.replace("../index.html");</script>'; exit;
+echo '<script>location.replace("../index.html");
+        alert("Звонок заказан! Мы перезвоним в ближайшее время!");</script>'; exit;
