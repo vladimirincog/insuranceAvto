@@ -96,14 +96,14 @@ mail(
         "Цель использования: " . $targetUse . "\n" .
         "Гос номер: " . $gosNumber . "\n" .
         "Год выпуска: " . $yaerCreate . "\n" .
-        "Категория: " . $category . "\n" .
+        //"Категория: " . $category . "\n" .
         "Марка: " . $brand . "\n" .
         "Модель: " . $model . "\n" .
         "Модификация: " . $modification . "\n" .
         "VIN: " . $vin . "\n" .
         "Тип документа: " . $typeCarDoc . "\n" .
         "Серия документа: " . $serialDocCar . "\n" .
-        "Номер документа авто: " . $numberDocCar .
+        "Номер документа авто: " . $numberDocCar . "\n".
 
         "СОБСТВЕННИК" . "\n" .
         "Является страхователем: " . $statusInsuder . "\n" .
@@ -177,9 +177,7 @@ mail(
         "\nДата рождения: " . $driverCalendar5 .
         "\nНомер ВУ: " . $driverVu5 .
         "\nДата выдачи ВУ: " . $driverVuDate5 .
-        "\nСаж: " . $driverExperience5,
-
-    "Данные для страховки"
+        "\nСаж: " . $driverExperience5
 );
 
 echo '<script>location.replace("../index.html");
