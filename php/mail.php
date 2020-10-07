@@ -16,7 +16,11 @@ $numberDocCar = $_POST['numberDocCar'];
 
 
 //Собственник
-$statusInsuder = $_POST['statusInsuder']; //Является страхователем
+
+if (!isset($_POST['statusInsuder'])) { //Является страхователем? Проверка checkbox
+    $statusInsuder = 'no';
+}
+
 $surnameOwner = $_POST['surnameOwner'];
 $nameOwner = $_POST['nameOwner'];
 $middleOwner = $_POST['middleOwner'];
@@ -31,7 +35,6 @@ $telOwner = $_POST['telOwner'];
 $emailOwner = $_POST['emailOwner'];
 
 //Страхователь
-
 
 $surnameInsuder = $_POST['surnameInsuder'];
 $nameInsuder = $_POST['nameInsuder'];
@@ -87,10 +90,12 @@ $driverVu5 = $_POST['driverVu5'];
 $driverVuDate5 = $_POST['driverVuDate5'];
 $driverExperience5 = $_POST['driverExperience5'];
 
+
+
 mail(
-    "9092345673@mail.ru",
+    "vladimirincog@gmail.com",
     "Заявка с сайта",
-    "АВТОМОБИЛЬ" . "\n" .
+    "\nАВТОМОБИЛЬ" . "\n" .
         "Период: " . $period . "\n" .
         "Дата начала: " . $startCalendar . "\n" .
         "Цель использования: " . $targetUse . "\n" .
@@ -103,9 +108,9 @@ mail(
         "VIN: " . $vin . "\n" .
         "Тип документа: " . $typeCarDoc . "\n" .
         "Серия документа: " . $serialDocCar . "\n" .
-        "Номер документа авто: " . $numberDocCar . "\n".
+        "Номер документа авто: " . $numberDocCar . "\n" .
 
-        "СОБСТВЕННИК" . "\n" .
+        "\nСОБСТВЕННИК" . "\n" .
         "Является страхователем: " . $statusInsuder . "\n" .
         "Фамилия: " . $surnameOwner . "\n" .
         "Имя: " . $nameOwner . "\n" .
@@ -120,7 +125,7 @@ mail(
         "Телефон: " . $telOwner . "\n" .
         "email: " . $emailOwner . "\n" .
 
-        "СТРАХОВАТЕЛЬ" . "\n" .
+        "\nСТРАХОВАТЕЛЬ" . "\n" .
         "Фамилия: " . $surnameInsuder . "\n" .
         "Имя: " . $nameInsuder . "\n" .
         "Отчество: " . $middleInsuder . "\n" .
@@ -181,4 +186,5 @@ mail(
 );
 
 echo '<script>location.replace("../index.html");
-alert("Идет расчет страховки! Мы перезвоним или напишем Вам в ближайшее время!");</script>'; exit;
+alert("Идет расчет страховки! Мы перезвоним или напишем Вам в ближайшее время!");</script>';
+exit;
