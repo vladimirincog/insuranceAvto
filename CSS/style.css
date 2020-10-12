@@ -44,21 +44,20 @@ h2 {
   font-size: 35px;
   color: black;
 }
-h4{
+h4 {
   font-size: 25px;
 }
 p {
   font-size: 15px;
   margin: 5px;
 }
-img{
+img {
   max-width: 100%;
   max-height: 100%;
 }
-.logo-img{
+.logo-img {
   height: 150px;
   margin-right: 20px;
-
 }
 label,
 .form-input-date p {
@@ -163,7 +162,6 @@ button {
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
-
 }
 
 .item-main {
@@ -347,7 +345,6 @@ form {
   color: black;
 }
 
-
 .FAQ {
   display: flex;
   flex-flow: column nowrap;
@@ -455,7 +452,6 @@ details > div {
     flex-flow: column wrap;
     justify-content: center;
     align-items: center;
-    
   }
 
   .conatiner-number-one {
@@ -552,17 +548,36 @@ details > div {
   height: 100%;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
 }
-.item-footer{
+.item-footer {
   text-align: center;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  justify-content: center;
 }
-.item-footer>img{
+.item-footer > img {
   padding: 40px;
   max-width: 150px;
+}
+.windowOk {
+  position: fixed;
+  right: 25%;
+  top: 30%;
+  width: 50%;
+  height: 40%;
+  display: block;
+  z-index: 1;
+  background: rgb(243, 243, 243);
+}
+.windowOk > p {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  display: none;
 }
 @media (min-width: 1000px) {
   .navOpenButton {
