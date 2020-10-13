@@ -8,5 +8,5 @@ mail(
     "\nНомер: " . $callTel .
         "\nИмя: " . $callName
 );
-echo '<script>location.replace("../index.html");
-        alert("Звонок заказан! Мы перезвоним в ближайшее время!");</script>'; exit;
+echo '<script>location.replace("../index.html");</script>';
+exit;
