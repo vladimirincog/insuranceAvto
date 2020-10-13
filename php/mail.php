@@ -185,6 +185,5 @@ mail(
         "\nСаж: " . $driverExperience5
 );
 
-echo '<script>location.replace("../index.html");
-alert("Идет расчет страховки! Мы перезвоним или напишем Вам в ближайшее время!");</script>';
+echo '<script>location.replace("../index.html");</script>';
 exit;
