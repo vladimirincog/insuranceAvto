@@ -15,14 +15,6 @@ navCloseButton[0].style.display = 'none';
 driversForm[0].style.display = 'flex';
 
 //Авто закрытие меню для телефонов
-/*document.addEventListener("click", function (e) {
-    if (e.target.className == "item-nav" && document.documentElement.clientWidth <= 1000) {
-        for (let i = 0; i <= navItem.length; i++) {
-            navItem[i].style.display = 'none';
-        }
-        navCloseFun();
-    }
-});*/
 
 //Открытие и закрытие меню
 function navOpenFun() {
