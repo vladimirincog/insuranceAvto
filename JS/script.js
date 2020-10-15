@@ -1,15 +1,16 @@
 
-"use strict";                                                          //ES для всего файла
+"use strict";                                                           //ES6 для всего файла
 let navItem = document.getElementsByClassName('item-nav');              //Элементы меню
 let navOpenButton = document.getElementsByClassName('navOpenButton');   //Стрелка открытия меню
 let navCloseButton = document.getElementsByClassName('navCloseButton'); //Стрелка закрытия меню
 let statusInsuder = document.getElementById('status-insuder');          //Cтатус собственника/страхователя
 let menuInsuder = document.getElementsByClassName('f4');                //Меню данных страхователя
 let insuder = document.getElementsByClassName('menu-4');                //Заголовок меню данных страхователя
-let driversElement = document.getElementsByClassName('driver');     //Элементы меню кол-ва водителей
-let driversForm = document.getElementsByClassName('frame-driver'); //Форма ввода водятеля
+let driversElement = document.getElementsByClassName('driver');          //Элементы меню кол-ва водителей
+let driversForm = document.getElementsByClassName('frame-driver');      //Форма ввода водятеля
 let middleNameCheck = document.getElementsByClassName('middle-name-check'); //ChekBox отчества
-let middleNameForm = document.getElementsByClassName('middle-name'); //input отчества
+let middleNameForm = document.getElementsByClassName('middle-name');    //input отчества
+
 
 navCloseButton[0].style.display = 'none';
 driversForm[0].style.display = 'flex';
@@ -102,20 +103,44 @@ function check() {
     }
 }
 
+
+function showWindowOk(){
+    let windowOk = document.getElementsByClassName('windowOk');
+    windowOk[0].style.display = 'block';
+}
+function hideWindowOk(){
+    let windowOk = document.getElementsByClassName('windowOk');
+    windowOk[0].style.display = 'none';
+}
+
 //Отправка данных на почту средствами AJAX и jQuery
+
+
 $('.form-action').submit(function(){
     $.post(
-        'post-email.php', // адрес обработчика
-         $('.form-action').serialize(), // отправляемые данные          
+        'http://localhost:8888/insuranceAvto/php/data-email.php', // адрес обработчика
+         $('.form-action').serialize(),                           // отправляемые данные          
   
-        function(msg) { // получен ответ сервера  
-            $('#my_form_email').hide('slow');
-            $('#my_message_email').html(msg);
+        function(msg) {                                           // получен ответ сервера  
+            showWindowOk();
         }
     );
-    
-    return false;
+    return false;                                                 //flase - не перезагружать страницу; true - перезагрузить страницу
 });
+
+$('.form-call-order').submit(function(){
+    $.post(
+        'http://localhost:8888/insuranceAvto/php/phone-email.php', // адрес обработчика
+         $('.form-action').serialize(),                            // отправляемые данные          
+  
+        function(msg) {                                            // получен ответ сервера  
+            showWindowOk();
+        }
+    );
+    return false;                                                  //flase - не перезагружать страницу; true - перезагрузить страницу
+});
+//Скрыть уведобление о отпраки данных
+$('.okButton').click(() => {hideWindowOk();})
 
 //Валидация формы
 /*
