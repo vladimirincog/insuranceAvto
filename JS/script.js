@@ -102,6 +102,21 @@ function check() {
     }
 }
 
+//Отправка данных на почту средствами AJAX и jQuery
+$('.form-action').submit(function(){
+    $.post(
+        'post-email.php', // адрес обработчика
+         $('.form-action').serialize(), // отправляемые данные          
+  
+        function(msg) { // получен ответ сервера  
+            $('#my_form_email').hide('slow');
+            $('#my_message_email').html(msg);
+        }
+    );
+    
+    return false;
+});
+
 //Валидация формы
 /*
 $('#send').click(function() {
