@@ -97,7 +97,7 @@ $driverExperience5 = $_POST['driverExperience5'];
 
 //Остправка email сообщения
 mail(
-    "vladimirincog@gmail.com",
+    "9092345673@mail.ru",  //9092345673@mail.ru   vladimirincog@gmail.com
     "Заявка с сайта",
     "\nАВТОМОБИЛЬ" . "\n" .
         "Период: " . $period . "\n" .
