@@ -58,8 +58,8 @@ document.addEventListener("click", function (e) {
         }
 
         if ("Не ограниченная" == TargetElement.textContent) {
-            
-            for(let i=0; i<=driversForm.length; i++){
+
+            for (let i = 0; i <= driversForm.length; i++) {
                 driversForm[i].style.display = 'none';
             }
         }
@@ -67,9 +67,9 @@ document.addEventListener("click", function (e) {
         else {
             for (let i = 0; i <= driversForm.length; i++) {
 
-                if(Number(TargetElement.textContent)-1 >= i){driversForm[i].style.display = 'flex';}
-                else{driversForm[i].style.display = 'none';}
-                
+                if (Number(TargetElement.textContent) - 1 >= i) { driversForm[i].style.display = 'flex'; }
+                else { driversForm[i].style.display = 'none'; }
+
             }
         }
     }
@@ -91,24 +91,24 @@ $(document).ready(() => {
 });
 //Проверка checkboxs-отчества
 function check() {
-    for(let i=0; i<=middleNameCheck.length; i++)
-    if (middleNameCheck[i].checked) {
-        middleNameForm[i].setAttribute("disabled", "true");
-        middleNameForm[i].style.backgroundColor = ' #e7e7e7';
-    }
-    else {
-        middleNameForm[i].removeAttribute("disabled");
-        middleNameForm[i].style.backgroundColor = 'white';
-        
-    }
+    for (let i = 0; i <= middleNameCheck.length; i++)
+        if (middleNameCheck[i].checked) {
+            middleNameForm[i].setAttribute("disabled", "true");
+            middleNameForm[i].style.backgroundColor = ' #e7e7e7';
+        }
+        else {
+            middleNameForm[i].removeAttribute("disabled");
+            middleNameForm[i].style.backgroundColor = 'white';
+
+        }
 }
 
 
-function showWindowOk(){
+function showWindowOk() {
     let windowOk = document.getElementsByClassName('windowOk');
     windowOk[0].style.display = 'block';
 }
-function hideWindowOk(){
+function hideWindowOk() {
     let windowOk = document.getElementsByClassName('windowOk');
     windowOk[0].style.display = 'none';
 }
@@ -116,31 +116,31 @@ function hideWindowOk(){
 //Отправка данных на почту средствами AJAX и jQuery
 
 
-$('.form-action').submit(function(){
+$('.form-action').submit(function () {
     $.post(
-        'http://localhost:8888/insuranceAvto/php/data-email.php', // адрес обработчика
-         $('.form-action').serialize(),                           // отправляемые данные          
-  
-        function(msg) {                                           // получен ответ сервера  
+        'https://insuranceavto.000webhostapp.com/php/data-email.php', // адрес обработчика 'http://localhost:8888/insuranceAvto/php/data-email.php'   https://insuranceavto.000webhostapp.com/
+        $('.form-action').serialize(),                           // отправляемые данные          
+
+        function (msg) {                                           // получен ответ сервера  
             showWindowOk();
         }
     );
     return false;                                                 //flase - не перезагружать страницу; true - перезагрузить страницу
 });
 
-$('.form-call-order').submit(function(){
+$('.form-call-order').submit(function () {
     $.post(
-        'http://localhost:8888/insuranceAvto/php/phone-email.php', // адрес обработчика
-         $('.form-action').serialize(),                            // отправляемые данные          
-  
-        function(msg) {                                            // получен ответ сервера  
+        'https://insuranceavto.000webhostapp.com/php/phone-email.php', // адрес обработчика  'http://localhost:8888/insuranceAvto/php/phone-email.php' https://insuranceavto.000webhostapp.com/
+        $('.form-action').serialize(),                            // отправляемые данные          
+
+        function (msg) {                                            // получен ответ сервера  
             showWindowOk();
         }
     );
     return false;                                                  //flase - не перезагружать страницу; true - перезагрузить страницу
 });
 //Скрыть уведобление о отпраки данных
-$('.okButton').click(() => {hideWindowOk();})
+$('.okButton').click(() => { hideWindowOk(); })
 
 //Валидация формы
 /*
