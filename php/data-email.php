@@ -188,3 +188,4 @@ mail(
         "\nДата выдачи ВУ: " . $driverVuDate5 .
         "\nСаж: " . $driverExperience5
 );
+echo 'Сообщение отправлено!';
