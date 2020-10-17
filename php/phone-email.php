@@ -10,4 +10,4 @@ mail(
     "\nНомер: " . $callTel .
         "\nИмя: " . $callName
 );
-exit;
+echo 'Сообщение отправлено!';
