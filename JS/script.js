@@ -50,7 +50,7 @@ document.addEventListener("click", function (e) {
     let TargetElement = e.target;
 
     //Переключатель меню водителей
-    if (e.target.className == 'driver' || e.target.className == 'driver start-driver' || e.target.className == 'driver end-driver') { 
+    if (e.target.className == 'driver' || e.target.className == 'driver start-driver' || e.target.className == 'driver end-driver') {
         TargetElement.style.backgroundColor = '#8abe5c';
         for (let i = 0; i < driversElement.length; i++) {
             if (TargetElement != driversElement[i]) {
@@ -106,8 +106,10 @@ function check() {
 }
 
 
-function showWindowOk() {
+function showWindowOk(text) {
     let windowOk = document.getElementsByClassName('windowOk');
+    let okText = document.getElementsByClassName('okText');
+    okText[0].textContent = text;
     windowOk[0].style.display = 'block';
 }
 function hideWindowOk() {
@@ -115,32 +117,61 @@ function hideWindowOk() {
     windowOk[0].style.display = 'none';
 }
 
+//Валидация формы
+function checkFormData() { return true; }
+
+
+//Проверка телефонной формы на заполненность полей
+function checkFormPhone() {
+    let errorForm = true;
+    let elementsForm = document.getElementsByClassName('call-order');
+    for (let i = 0; i < elementsForm.length; i++) {
+            elementsForm[i].classList.remove('__error');
+            errorForm = true;
+        }
+    for (let i = 0; i < elementsForm.length; i++) {
+        if (elementsForm[i].value == '') {
+            elementsForm[i].classList.add('__error');
+            errorForm = false;
+        }
+    }
+    return errorForm;
+}
+
 
 //Отправка данных на почту средствами AJAX и jQuery
-document.addEventListener('DOMContentLoaded', function() {
-$('.form-action').submit(function () {
-    $.post(
-        'http://localhost:8888/insuranceAvto/php/data-email.php',     // адрес обработчика 'http://localhost:8888/insuranceAvto/php/data-email.php'   https://insuranceavto.000webhostapp.com/
-        $('.form-action').serialize(),                                // отправляемые данные          
+document.addEventListener('DOMContentLoaded', function () {
 
-        function (msg) {                                              // получен ответ сервера  
-            showWindowOk();
-        }
-    );
-    return false;                                                     //flase - не перезагружать страницу; true - перезагрузить страницу
-});
+    $('.form-action').submit(function () {
+        if (checkFormData()) {
+            $.post(
+                'http://localhost:8888/insuranceAvto/php/data-email.php',     // адрес обработчика 'http://localhost:8888/insuranceAvto/php/data-email.php'   https://insuranceavto.000webhostapp.com/
+                $('.form-action').serialize(),                                // отправляемые данные          
 
-$('.form-call-order').submit(function () {
-    $.post(
-        'http://localhost:8888/insuranceAvto/php/phone-email.php',     // адрес обработчика  'http://localhost:8888/insuranceAvto/php/phone-email.php' https://insuranceavto.000webhostapp.com/
-        $('.form-call-order').serialize(),                                 // отправляемые данные          
+                function (msg) {                                              // получен ответ сервера  
+                    showWindowOk('Мы расчитаем стоймость в течении 5 минут и перезвоним Вам');
+                }
+            );
+            return false;                                                     //flase - не перезагружать страницу; true - перезагрузить страницу
+        }  
+        else{showWindowOk('Все поля должны быть заполнены');}                                                 
+    });
 
-        function (msg) {                                               // получен ответ сервера  
-            showWindowOk();
-        }
-    );
-    return false;                                                      //flase - не перезагружать страницу; true - перезагрузить страницу
-});
-//Скрыть уведомление о отправке данных
-$('.okButton').click(() => { hideWindowOk(); })
+    $('.form-call-order').submit(function () {
+        if (checkFormPhone()) {
+            $.post(
+                'http://localhost:8888/insuranceAvto/php/phone-email.php',     // адрес обработчика  'http://localhost:8888/insuranceAvto/php/phone-email.php' https://insuranceavto.000webhostapp.com/
+                $('.form-call-order').serialize(),                                 // отправляемые данные          
+
+                function (msg) {                                               // получен ответ сервера  
+                    showWindowOk('Мы перезвоним Вам в течении 5 минут');
+                }
+
+            );
+            return false;                                                       //flase - не перезагружать страницу; true - перезагрузить страницу
+       }     
+       else{showWindowOk('Все поля должны быть заполнены');}                                   
+    });
+    //Скрыть уведомление о отправке данных
+    $('.okButton').click(() => { hideWindowOk(); })
 })
