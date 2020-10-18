@@ -65,6 +65,18 @@ label,
   font-weight: bold;
   font-size: 25px;
 }
+
+.__error{
+  box-shadow: 0 0 10px red;
+}
+
+label:focus,
+input:focus,
+select:focus,
+option:focus{
+  box-shadow: 0 0 10px forestgreen;
+}
+
 input,
 select,
 option {
@@ -77,6 +89,7 @@ option {
   background: white;
   font-size: 15pt;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  outline: none;
 }
 /*Так как padding не работает на select, 
 для уравнивания высоты и ширины 
@@ -377,18 +390,24 @@ form {
   transform: translate(-50%, -50%);
   max-width: 100%;
   max-height: 100%;
-  display: flex;
-  flex-flow: column wrap;
   padding: 10%;
-  font-size: 35px;
+  font-size: 40px;
   text-align: center;
 }
 .okButton{
-  margin-top: 10%;
-  max-width: 80%;
-  max-height: 80%;
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  padding: 15px;
+  font-size: 35px;
+  border-radius: 15px;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.8);
 }
-
+.okButton:hover{
+  box-shadow: 0 0 15px forestgreen;
+}
 /*Спойлер FAQ*/
 #status-insuder,
 #patronymic {
