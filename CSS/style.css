@@ -66,14 +66,14 @@ label,
   font-size: 25px;
 }
 
-.__error{
+.__error {
   box-shadow: 0 0 10px red;
 }
 
 label:focus,
 input:focus,
 select:focus,
-option:focus{
+option:focus {
   box-shadow: 0 0 10px forestgreen;
 }
 
@@ -221,6 +221,9 @@ button {
   border-radius: 10px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
 }
+.button-calculation:hover {
+  box-shadow: 0 0 15px forestgreen;
+}
 .form-action {
   display: flex;
   flex-flow: column nowrap;
@@ -240,8 +243,8 @@ button {
 .f2,
 .f3,
 .f4,
-.f5{
-  display: flex; 
+.f5 {
+  display: flex;
   flex-flow: row wrap;
   justify-content: center;
   align-items: center;
@@ -293,7 +296,12 @@ h3 {
   text-align: center;
   font-size: 33px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
 }
+.driver:hover {
+  box-shadow: 0 0 15px forestgreen;
+}
+
 .start-driver {
   border-radius: 10px 0px 0px 10px;
   background: white;
@@ -301,6 +309,7 @@ h3 {
 .end-driver {
   border-radius: 0px 10px 10px 0px;
   width: 230px;
+  background: #8abe5c;
 }
 .container-profit {
   display: flex;
@@ -316,7 +325,7 @@ h3 {
 }
 .item-pofit {
   width: 25%;
-  min-height: 200px;
+  min-height: 300px;
   height: 100%;
   margin: 10px;
   background: white;
@@ -397,7 +406,7 @@ form {
   font-size: 40px;
   text-align: center;
 }
-.okButton{
+.okButton {
   position: absolute;
   top: 80%;
   left: 50%;
@@ -408,53 +417,48 @@ form {
   border-radius: 15px;
   box-shadow: 0 0 2px rgba(0, 0, 0, 0.8);
 }
-.okButton:hover{
+.okButton:hover {
   box-shadow: 0 0 15px forestgreen;
 }
-/*Спойлер FAQ*/
-#status-insuder,
-#patronymic {
-  width: 15px;
+
+.spoiler {
+  width: 60%;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+}
+.spoiler > div {
+  padding: 5px;
+  margin: 10px;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.8);
+  border-radius: 15px;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
 }
 
-details > div {
-  cursor: default;
+.spoiler > div:hover {
+  box-shadow: 0 0 15px forestgreen;
 }
-.spoiler {
-  /* border: 1px solid #e0e0e0;*/
-  padding: 0 1em;
+
+.spoiler_links {
+  width: 100%;
+  height: 100%;
+  font-size: 25px;
+}
+.spoiler_links::before {
+  content: "☞";
+  margin: 5px;
+  font-size: 30px;
+  text-decoration: solid;
+}
+.spoiler_body {
+  display: none;
   cursor: pointer;
 }
-.spoiler details {
-  align-items: center;
-  padding: 1em 0;
+.question {
+  font-size: 20px;
 }
-.spoiler summary {
-  align-items: center;
-  font-size: 22pt;
-}
-.spoiler details div {
-  overflow: hidden;
-  padding: 1em 0 0;
-  align-items: center;
-}
-
-/*Анимация спойлера 
-высота от 0 до 10EM в течении Xs сек*/
-.spoiler details[open] div {
-  animation: spoiler 0.8s;
-}
-
-@keyframes spoiler {
-  0% {
-    max-height: 0;
-  }
-  100% {
-    max-height: 10em;
-  }
-}
-/*------------------------------------*/
-
 
 @media (max-width: 1000px) {
   body {
@@ -503,7 +507,9 @@ details > div {
     border: 3px solid white;
     border-radius: 4px;
     font-size: 17pt;
+    cursor: pointer;
   }
+
 
   .container-nav {
     display: flex;
@@ -543,6 +549,8 @@ details > div {
     margin: 20px;
     display: none;
   }
+
+
   .services {
     text-align: center;
     display: flex;
@@ -584,13 +592,9 @@ details > div {
     padding: 5px;
     max-width: 100%;
   }
-  .driver {
-    background: white;
-    height: 55px;
-    width: 55px;
-  }
-  .end-driver {
-    width: 230px;
+
+  .spoiler {
+    width: 90%;
   }
 }
 .container-footer {
