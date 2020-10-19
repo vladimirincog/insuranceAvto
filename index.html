@@ -83,7 +83,7 @@
 
             <div class="item-main form-input-date">
                 <h1>Узнать цену страховки</h1>
-                <form class="form-action">
+                <form name='formAction' class="form-action" action="">
                     <!-- action="php/mail.php" method="post" -->
                     <a name="calculation" class="anchor"></a>
                     <div class="f1">
@@ -199,7 +199,7 @@
                             <input name='nameOwner'>
                         </div>
                         <div class="f3-e">
-                            <p>Отчество <input class='middle-name-check' type="checkbox" onchange="check()" value="on">
+                            <p>Отчество <input class='middle-name-check' type="checkbox" onchange="checkMiddleName()" value="on">
                                 <label>Без отчества</label></p>
                             <input name='middleOwner' class='middle-name'>
                         </div>
@@ -314,169 +314,169 @@
                             <h3 class='f5-e'>Водитель №1</h3>
                             <div class="f5-e">
                                 <p>Фамилия</p>
-                                <input name='driverSurname'>
+                                <input name='driverSurname' class = 'driverInput'>
                             </div>
                             <div class="f5-e">
                                 <p>Имя</p>
-                                <input name='driverName'>
+                                <input name='driverName' class = 'driverInput'>
                             </div>
                             <div class="f5-e">
                                 <p>Отчество <input class='middle-name-check' id='patronymic' type="checkbox"
-                                        onchange="check()">
+                                        onchange="checkMiddleName()"> 
                                     <label>Без отчества</label></p>
-                                <input class='middle-name' name='driverMiddle'>
+                                <input class='middle-name driverInput' name='driverMiddle'>
                             </div>
                             <div class="f5-e">
                                 <p>Дата рождения</p>
-                                <input type="date" name="driverCalendar">
+                                <input type="date" name="driverCalendar" class = 'driverInput'>
                             </div>
                             <div class="f5-e">
                                 <p>Водительское удостоверение</p>
-                                <input placeholder="99 АА 999999" name="driverVu">
+                                <input placeholder="99 АА 999999" name="driverVu" class = 'driverInput'>
                             </div>
                             <div class="f5-e">
                                 <p>Дата выдачи</p>
-                                <input type="date" name="driverVuDate">
+                                <input type="date" name="driverVuDate" class = 'driverInput'>
                             </div>
                             <div class="f5-e">
                                 <p>Стаж</p>
-                                <input type="date" name="driverExperience">
+                                <input type="date" name="driverExperience" class = 'driverInput'>
                             </div>
                         </div>
                         <div class="frame-driver">
                             <h3 class='f5-e'>Водитель №2</h3>
                             <div class="f5-e">
                                 <p>Фамилия</p>
-                                <input name='driverSurname2'>
+                                <input name='driverSurname2' class = 'driverInput'>
                             </div>
                             <div class="f5-e">
                                 <p>Имя</p>
-                                <input name='driverName2'>
+                                <input name='driverName2' class = 'driverInput'>
                             </div>
                             <div class="f5-e">
                                 <p>Отчество <input class='middle-name-check' id='patronymic' type="checkbox"
-                                        onchange="check()">
+                                        onchange="checkMiddleName()">
                                     <label>Без отчества</label></p>
-                                <input class='middle-name' name='driverMiddle2'>
+                                <input class='middle-name driverInput' name='driverMiddle2'>
                             </div>
                             <div class="f5-e">
                                 <p>Дата рождения</p>
-                                <input type="date" name="driverCalendar2">
+                                <input type="date" name="driverCalendar2" class = 'driverInput'>
                             </div>
                             <div class="f5-e">
                                 <p>Водительское удостоверение</p>
-                                <input placeholder="99 АА 999999" name="driverVu2">
+                                <input placeholder="99 АА 999999" name="driverVu2" class = 'driverInput'>
                             </div>
                             <div class="f5-e">
                                 <p>Дата выдачи</p>
-                                <input type="date" name="driverVuDate2">
+                                <input type="date" name="driverVuDate2" class = 'driverInput'>
                             </div>
                             <div class="f5-e">
                                 <p>Стаж</p>
-                                <input type="date" name="driverExperience2">
+                                <input type="date" name="driverExperience2" class = 'driverInput'>
                             </div>
                         </div>
                         <div class="frame-driver">
                             <h3 class='f5-e'>Водитель №3</h3>
                             <div class="f5-e">
                                 <p>Фамилия</p>
-                                <input name='driverSurname3'>
+                                <input name='driverSurname3' class = 'driverInput'>
                             </div>
                             <div class="f5-e">
                                 <p>Имя</p>
-                                <input name='driverName3'>
+                                <input name='driverName3' class = 'driverInput'>
                             </div>
                             <div class="f5-e">
                                 <p>Отчество <input class='middle-name-check' id='patronymic' type="checkbox"
-                                        onchange="check()">
+                                        onchange="checkMiddleName()">
                                     <label>Без отчества</label></p>
-                                <input class='middle-name' name='driverMiddle3'>
+                                <input class='middle-name driverInput' name='driverMiddle3'>
                             </div>
                             <div class="f5-e">
                                 <p>Дата рождения</p>
-                                <input type="date" name="driverCalendar3">
+                                <input type="date" name="driverCalendar3" class = 'driverInput'>
                             </div>
                             <div class="f5-e">
                                 <p>Водительское удостоверение</p>
-                                <input placeholder="99 АА 999999" name="driverVu3">
+                                <input placeholder="99 АА 999999" name="driverVu3" class = 'driverInput'>
                             </div>
                             <div class="f5-e">
                                 <p>Дата выдачи</p>
-                                <input type="date" name="driverVuDate3">
+                                <input type="date" name="driverVuDate3" class = 'driverInput'>
                             </div>
                             <div class="f5-e">
                                 <p>Стаж</p>
-                                <input type="date" name="driverExperience3">
+                                <input type="date" name="driverExperience3" class = 'driverInput'> 
                             </div>
                         </div>
                         <div class="frame-driver">
                             <h3 class='f5-e'>Водитель №4</h3>
                             <div class="f5-e">
                                 <p>Фамилия</p>
-                                <input name='driverSurname4'>
+                                <input name='driverSurname4' class = 'driverInput'>
                             </div>
                             <div class="f5-e">
                                 <p>Имя</p>
-                                <input name='driverName4'>
+                                <input name='driverName4' class = 'driverInput'>
                             </div>
                             <div class="f5-e">
                                 <p>Отчество <input class='middle-name-check' id='patronymic' type="checkbox"
-                                        onchange="check()">
+                                        onchange="checkMiddleName()">
                                     <label>Без отчества</label></p>
-                                <input class='middle-name' name='driverMiddle4'>
+                                <input class='middle-name driverInput' name='driverMiddle4'>
                             </div>
                             <div class="f5-e">
                                 <p>Дата рождения</p>
-                                <input type="date" name="driverCalendar4">
+                                <input type="date" name="driverCalendar4" class = 'driverInput'>
                             </div>
                             <div class="f5-e">
                                 <p>Водительское удостоверение</p>
-                                <input placeholder="99 АА 999999" name="driverVu4">
+                                <input placeholder="99 АА 999999" name="driverVu4" class = 'driverInput'>
                             </div>
                             <div class="f5-e">
                                 <p>Дата выдачи</p>
-                                <input type="date" name="driverVuDate4">
+                                <input type="date" name="driverVuDate4" class = 'driverInput'>
                             </div>
                             <div class="f5-e">
                                 <p>Стаж</p>
-                                <input type="date" name="driverExperience4">
+                                <input type="date" name="driverExperience4" class = 'driverInput'>
                             </div>
                         </div>
                         <div class="frame-driver">
                             <h3 class='f5-e'>Водитель №5</h3>
                             <div class="f5-e">
                                 <p>Фамилия</p>
-                                <input name='driverSurname5'>
+                                <input name='driverSurname5' class = 'driverInput'>
                             </div>
                             <div class="f5-e">
                                 <p>Имя</p>
-                                <input name='driverName5'>
+                                <input name='driverName5' class = 'driverInput'>
                             </div>
                             <div class="f5-e">
                                 <p>Отчество <input class='middle-name-check' id='patronymic' type="checkbox"
-                                        onchange="check()">
+                                        onchange="checkMiddleName()">
                                     <label>Без отчества</label></p>
-                                <input class='middle-name' name='driverMiddle5'>
+                                <input class='middle-name driverInput' name='driverMiddle5'>
                             </div>
                             <div class="f5-e">
                                 <p>Дата рождения</p>
-                                <input type="date" name="driverCalendar5">
+                                <input type="date" name="driverCalendar5" class = 'driverInput'>
                             </div>
                             <div class="f5-e">
                                 <p>Водительское удостоверение</p>
-                                <input placeholder="99 АА 999999" name="driverVu5">
+                                <input placeholder="99 АА 999999" name="driverVu5" class = 'driverInput'>
                             </div>
                             <div class="f5-e">
                                 <p>Дата выдачи</p>
-                                <input type="date" name="driverVuDate5">
+                                <input type="date" name="driverVuDate5" class = 'driverInput'>
                             </div>
                             <div class="f5-e">
                                 <p>Стаж</p>
-                                <input type="date" name="driverExperience5">
+                                <input type="date" name="driverExperience5" class = 'driverInput'>
                             </div>
                         </div>
                     </div>
-                    <button type="submit" class='buttonSendData'>Рассчитать</button>
+                    <button type="button" class='buttonSendData'>Рассчитать</button>
                 </form>
             </div>
 
@@ -679,7 +679,7 @@
 
             <div class="item-main container-call"><a name="call" class="anchor"></a>
                 <h1>Заказ звонка</h1>
-                <form class="form-call-order">
+                <form class="form-call-order" action="">
                     <!-- action="php/phone.php" method="post" name="form1"-->
 
                     <P class="item-call" type="text">Имя</P>
@@ -687,7 +687,7 @@
                     <p class="item-call">Номер телефона</p>
                     <input name="callTel" class="call-order tel" type="tel" placeholder="+7(999)999-99-99">
                     <br>
-                    <button type="submit" class="item-call buttonSendPhone">Заказать</button>
+                    <button type="button" class="item-call buttonSendPhone">Заказать</button>
                 </form>
             </div>
 
