@@ -18,7 +18,7 @@
 <body>
     <a name="back"></a>
     <div class="conatiner-number-one">
-        
+
         <div class="windowOk">
             <p class='okText'>Мы свяжемся с Вами в ближайшее время!</p>
             <div class='okButton'>Закрыть</div>
@@ -199,7 +199,8 @@
                             <input name='nameOwner'>
                         </div>
                         <div class="f3-e">
-                            <p>Отчество <input class='middle-name-check' type="checkbox" onchange="checkMiddleName()" value="on">
+                            <p>Отчество <input class='middle-name-check' type="checkbox" onchange="checkMiddleName()"
+                                    value="on">
                                 <label>Без отчества</label></p>
                             <input name='middleOwner' class='middle-name'>
                         </div>
@@ -248,55 +249,55 @@
                         <h2 class='menu-4'> Страхователь</h2>
                         <div class="f4-e">
                             <p>Фамилия</p>
-                            <input name='surnameInsuder'>
+                            <input name='surnameInsuder' class='insuder'>
                         </div>
                         <div class="f4-e">
                             <p>Имя</p>
-                            <input name='nameInsuder'>
+                            <input name='nameInsuder' class='insuder'>
                         </div>
                         <div class="f4-e">
-                            <p>Отчество <input class='middle-name-check' type="checkbox" onchange="check()">
+                            <p>Отчество <input class='middle-name-check' type="checkbox" onchange="checkMiddleName()">
                                 <label>Без отчества</label></p>
-                            <input class='middle-name' name='middleInsuder'>
+                            <input class='middle-name insuder' name='middleInsuder'>
                         </div>
                         <div class="f4-e">
                             <p>Дата рождения</p>
-                            <input type="date" name="calendarInsuder">
+                            <input type="date" name="calendarInsuder" class='insuder'>
                         </div>
                         <div class="f4-e">
                             <p>Тип доукмента</p>
-                            <select name="typeDocInsuder">
+                            <select name="typeDocInsuder" class='insuder'>
                                 <option>Выберите из списка</option>
                                 <option>Паспорт РФ</option>
                             </select>
                         </div>
                         <div class="f4-e">
                             <p>Серия</p>
-                            <input name='serialDocInsuder'>
+                            <input name='serialDocInsuder' class='insuder'>
                         </div>
                         <div class="f4-e">
                             <p>Номер</p>
-                            <input name='numberDocInsuder'>
+                            <input name='numberDocInsuder' class='insuder'>
                         </div>
                         <div class="f4-e">
                             <p>Дата выдачи</p>
-                            <input type="date" name="dateDocInsuder">
+                            <input type="date" name="dateDocInsuder" class='insuder'>
                         </div>
                         <div class="f4-e">
                             <p>Выдан</p>
-                            <input class="issued" name="issuedDocInsuder" placeholder="Код или наименование">
+                            <input class="issued insuder" name="issuedDocInsuder" placeholder="Код или наименование">
                         </div>
                         <div class="f4-e">
                             <p>Адресс регистрации</p>
-                            <input name="adressDocInsuder">
+                            <input name="adressDocInsuder" class='insuder'>
                         </div>
                         <div class="f4-e">
                             <p>Телефон</p>
-                            <input class="tel" name="telInsuder" placeholder="+7(999)999-99-99">
+                            <input class="tel insuder" name="telInsuder" placeholder="+7(999)999-99-99">
                         </div>
                         <div class="f4-e">
                             <p>E-mail</p>
-                            <input placeholder="ivan2000@mail.ru" name="emailInsuder">
+                            <input placeholder="ivan2000@mail.ru" name="emailInsuder" class='insuder'>
                         </div>
                     </div>
 
@@ -314,44 +315,44 @@
                             <h3 class='f5-e'>Водитель №1</h3>
                             <div class="f5-e">
                                 <p>Фамилия</p>
-                                <input name='driverSurname' class = 'driverInput'>
+                                <input name='driverSurname' class='driverInput'>
                             </div>
                             <div class="f5-e">
                                 <p>Имя</p>
-                                <input name='driverName' class = 'driverInput'>
+                                <input name='driverName' class='driverInput'>
                             </div>
                             <div class="f5-e">
                                 <p>Отчество <input class='middle-name-check' id='patronymic' type="checkbox"
-                                        onchange="checkMiddleName()"> 
+                                        onchange="checkMiddleName()">
                                     <label>Без отчества</label></p>
                                 <input class='middle-name driverInput' name='driverMiddle'>
                             </div>
                             <div class="f5-e">
                                 <p>Дата рождения</p>
-                                <input type="date" name="driverCalendar" class = 'driverInput'>
+                                <input type="date" name="driverCalendar" class='driverInput'>
                             </div>
                             <div class="f5-e">
                                 <p>Водительское удостоверение</p>
-                                <input placeholder="99 АА 999999" name="driverVu" class = 'driverInput'>
+                                <input placeholder="99 АА 999999" name="driverVu" class='driverInput'>
                             </div>
                             <div class="f5-e">
                                 <p>Дата выдачи</p>
-                                <input type="date" name="driverVuDate" class = 'driverInput'>
+                                <input type="date" name="driverVuDate" class='driverInput'>
                             </div>
                             <div class="f5-e">
                                 <p>Стаж</p>
-                                <input type="date" name="driverExperience" class = 'driverInput'>
+                                <input type="date" name="driverExperience" class='driverInput'>
                             </div>
                         </div>
                         <div class="frame-driver">
                             <h3 class='f5-e'>Водитель №2</h3>
                             <div class="f5-e">
                                 <p>Фамилия</p>
-                                <input name='driverSurname2' class = 'driverInput'>
+                                <input name='driverSurname2' class='driverInput'>
                             </div>
                             <div class="f5-e">
                                 <p>Имя</p>
-                                <input name='driverName2' class = 'driverInput'>
+                                <input name='driverName2' class='driverInput'>
                             </div>
                             <div class="f5-e">
                                 <p>Отчество <input class='middle-name-check' id='patronymic' type="checkbox"
@@ -361,30 +362,30 @@
                             </div>
                             <div class="f5-e">
                                 <p>Дата рождения</p>
-                                <input type="date" name="driverCalendar2" class = 'driverInput'>
+                                <input type="date" name="driverCalendar2" class='driverInput'>
                             </div>
                             <div class="f5-e">
                                 <p>Водительское удостоверение</p>
-                                <input placeholder="99 АА 999999" name="driverVu2" class = 'driverInput'>
+                                <input placeholder="99 АА 999999" name="driverVu2" class='driverInput'>
                             </div>
                             <div class="f5-e">
                                 <p>Дата выдачи</p>
-                                <input type="date" name="driverVuDate2" class = 'driverInput'>
+                                <input type="date" name="driverVuDate2" class='driverInput'>
                             </div>
                             <div class="f5-e">
                                 <p>Стаж</p>
-                                <input type="date" name="driverExperience2" class = 'driverInput'>
+                                <input type="date" name="driverExperience2" class='driverInput'>
                             </div>
                         </div>
                         <div class="frame-driver">
                             <h3 class='f5-e'>Водитель №3</h3>
                             <div class="f5-e">
                                 <p>Фамилия</p>
-                                <input name='driverSurname3' class = 'driverInput'>
+                                <input name='driverSurname3' class='driverInput'>
                             </div>
                             <div class="f5-e">
                                 <p>Имя</p>
-                                <input name='driverName3' class = 'driverInput'>
+                                <input name='driverName3' class='driverInput'>
                             </div>
                             <div class="f5-e">
                                 <p>Отчество <input class='middle-name-check' id='patronymic' type="checkbox"
@@ -394,30 +395,30 @@
                             </div>
                             <div class="f5-e">
                                 <p>Дата рождения</p>
-                                <input type="date" name="driverCalendar3" class = 'driverInput'>
+                                <input type="date" name="driverCalendar3" class='driverInput'>
                             </div>
                             <div class="f5-e">
                                 <p>Водительское удостоверение</p>
-                                <input placeholder="99 АА 999999" name="driverVu3" class = 'driverInput'>
+                                <input placeholder="99 АА 999999" name="driverVu3" class='driverInput'>
                             </div>
                             <div class="f5-e">
                                 <p>Дата выдачи</p>
-                                <input type="date" name="driverVuDate3" class = 'driverInput'>
+                                <input type="date" name="driverVuDate3" class='driverInput'>
                             </div>
                             <div class="f5-e">
                                 <p>Стаж</p>
-                                <input type="date" name="driverExperience3" class = 'driverInput'> 
+                                <input type="date" name="driverExperience3" class='driverInput'>
                             </div>
                         </div>
                         <div class="frame-driver">
                             <h3 class='f5-e'>Водитель №4</h3>
                             <div class="f5-e">
                                 <p>Фамилия</p>
-                                <input name='driverSurname4' class = 'driverInput'>
+                                <input name='driverSurname4' class='driverInput'>
                             </div>
                             <div class="f5-e">
                                 <p>Имя</p>
-                                <input name='driverName4' class = 'driverInput'>
+                                <input name='driverName4' class='driverInput'>
                             </div>
                             <div class="f5-e">
                                 <p>Отчество <input class='middle-name-check' id='patronymic' type="checkbox"
@@ -427,30 +428,30 @@
                             </div>
                             <div class="f5-e">
                                 <p>Дата рождения</p>
-                                <input type="date" name="driverCalendar4" class = 'driverInput'>
+                                <input type="date" name="driverCalendar4" class='driverInput'>
                             </div>
                             <div class="f5-e">
                                 <p>Водительское удостоверение</p>
-                                <input placeholder="99 АА 999999" name="driverVu4" class = 'driverInput'>
+                                <input placeholder="99 АА 999999" name="driverVu4" class='driverInput'>
                             </div>
                             <div class="f5-e">
                                 <p>Дата выдачи</p>
-                                <input type="date" name="driverVuDate4" class = 'driverInput'>
+                                <input type="date" name="driverVuDate4" class='driverInput'>
                             </div>
                             <div class="f5-e">
                                 <p>Стаж</p>
-                                <input type="date" name="driverExperience4" class = 'driverInput'>
+                                <input type="date" name="driverExperience4" class='driverInput'>
                             </div>
                         </div>
                         <div class="frame-driver">
                             <h3 class='f5-e'>Водитель №5</h3>
                             <div class="f5-e">
                                 <p>Фамилия</p>
-                                <input name='driverSurname5' class = 'driverInput'>
+                                <input name='driverSurname5' class='driverInput'>
                             </div>
                             <div class="f5-e">
                                 <p>Имя</p>
-                                <input name='driverName5' class = 'driverInput'>
+                                <input name='driverName5' class='driverInput'>
                             </div>
                             <div class="f5-e">
                                 <p>Отчество <input class='middle-name-check' id='patronymic' type="checkbox"
@@ -460,19 +461,19 @@
                             </div>
                             <div class="f5-e">
                                 <p>Дата рождения</p>
-                                <input type="date" name="driverCalendar5" class = 'driverInput'>
+                                <input type="date" name="driverCalendar5" class='driverInput'>
                             </div>
                             <div class="f5-e">
                                 <p>Водительское удостоверение</p>
-                                <input placeholder="99 АА 999999" name="driverVu5" class = 'driverInput'>
+                                <input placeholder="99 АА 999999" name="driverVu5" class='driverInput'>
                             </div>
                             <div class="f5-e">
                                 <p>Дата выдачи</p>
-                                <input type="date" name="driverVuDate5" class = 'driverInput'>
+                                <input type="date" name="driverVuDate5" class='driverInput'>
                             </div>
                             <div class="f5-e">
                                 <p>Стаж</p>
-                                <input type="date" name="driverExperience5" class = 'driverInput'>
+                                <input type="date" name="driverExperience5" class='driverInput'>
                             </div>
                         </div>
                     </div>
@@ -504,12 +505,15 @@
             </div>
 
             <div class="item-main FAQ">
-                <h1>Часто задаваемые вопросы</h1>
                 <a name="FAQ" class="anchor"></a>
+                <h1>Часто задаваемые вопросы</h1>
+
+
                 <div class="spoiler">
-                    <details>
-                        <summary>Почему стоимость ОСАГО в страховых компаниях может отличаться?</summary>
-                        <div>
+                    <div>
+                        <a href="" class="spoiler_links">Почему стоимость ОСАГО в страховых компаниях может
+                            отличаться?</a>
+                        <div class="spoiler_body">
                             <p class="question">Разница в стоимости ОСАГО обусловлена тем, что страховые компании вправе
                                 устанавливать
                                 базовые тарифы в пределах от 2 471 руб. до 5 436 рублей. Базовый тариф умножается на
@@ -533,10 +537,11 @@
 
                             <p class="question">Стоимость ОСАГО = ТБ * КТ * КБМ * КВС * КО * КМ * КС * КН * КП.</p>
                         </div>
-                    </details>
-                    <details>
-                        <summary>Чего вы не знали об ОСАГО</summary>
-                        <div>
+                    </div>
+                    <!--//-->
+                    <div>
+                        <a href="" class="spoiler_links">Чего вы не знали об ОСАГО</a>
+                        <div class="spoiler_body">
                             <ul class="question">
                                 <li>С 1 октября 2019 года водители Москвы, Санкт-Петербурга, Подмосковья и Ленобласти
                                     могут
@@ -578,10 +583,11 @@
                                     случилось ДТП</li>
                             </ul>
                         </div>
-                    </details>
-                    <details>
-                        <summary>Что такое КБМ?</summary>
-                        <div>
+                    </div>
+                    <!--//-->
+                    <div>
+                        <a href="" class="spoiler_links">Что такое КБМ?</a>
+                        <div class="spoiler_body">
                             <p class="question">КБМ — коэффициент безаварийной езды. Система бонус-малус предполагает
                                 применение как
                                 понижающих, так и повышающих коэффициентов, если водитель допустил аварию по своей вине
@@ -600,10 +606,11 @@
                                 КБМ=0,65,
                                 КБМ=0,7, стоимость будет рассчитана по наибольшему, то есть по КБМ=1.</p>
                         </div>
-                    </details>
-                    <details>
-                        <summary>Почему некорректно отображается КБМ и как его исправить?</summary>
-                        <div>
+                    </div>
+                    <!--//-->
+                    <div>
+                        <a href="" class="spoiler_links">Почему некорректно отображается КБМ и как его исправить?</a>
+                        <div class="spoiler_body">
                             <p class="question"> Источником информации о КБМ является РСА (Российский Союз
                                 Автостраховщиков), страховые
                                 компании обращаются в РСА за получением коэффициента и расчета стоимости ОСАГО.
@@ -626,20 +633,22 @@
                                 ОСАГО.
                                 Страховая компания восстановит историю автовладения и верный КБМ.</p>
                         </div>
-                    </details>
-                    <details>
-                        <summary>Как вписать в полис нового водителя?</summary>
-                        <div>
+                    </div>
+                    <!--//-->
+                    <div>
+                        <a href="" class="spoiler_links">Как вписать в полис нового водителя?</a>
+                        <div class="spoiler_body">
                             <p class="question">Если вам потребуется позже вписать водителя в полис ОСАГО, нужно
                                 обратиться в страховую
                                 компанию. Страховая компания сделает перерасчет стоимости полиса согласно КБМ нового
                                 водителя, предложит при необходимости доплатить за него и после оплаты впишет в полис
                                 ОСАГО.</p>
                         </div>
-                    </details>
-                    <details>
-                        <summary>Как проверить подлинность полиса ОСАГО?</summary>
-                        <div>
+                    </div>
+                    <!--//-->
+                    <div>
+                        <a href="" class="spoiler_links">Как проверить подлинность полиса ОСАГО?</a>
+                        <div class="spoiler_body">
                             <p class="question">Подлинность полиса ОСАГО можно проверить сразу же после оформления на <a
                                     href="https://dkbm-web.autoins.ru/dkbm-web-1.0/bsostate.htm"> сайте РСА </a>. Вам
                                 потребуется указать серию и номер полиса ОСАГО.</p>
@@ -652,10 +661,11 @@
                                 приобретаете стопроцентно
                                 подлинную страховку на машину.</p>
                         </div>
-                    </details>
-                    <details>
-                        <summary>Что если страховая компания прекратила свою работу?</summary>
-                        <div>
+                    </div>
+                    <!--//-->
+                    <div>
+                        <a href="" class="spoiler_links">Что если страховая компания прекратила свою работу?</a>
+                        <div class="spoiler_body">
                             <p class="question">Если страховая компания ушла с рынка, выплаты по ОСАГО за неё будет
                                 делать РСА (Российский
                                 Союз Автостраховщиков).</p>
@@ -672,7 +682,7 @@
                                 в
                                 РСА.</p>
                         </div>
-                    </details>
+                    </div>
                 </div>
 
             </div>
