@@ -7,12 +7,10 @@ let statusInsuder = document.getElementById('status-insuder');          //Cта�
 let menuInsuder = document.getElementsByClassName('f4');                //Меню данных страхователя
 let insuder = document.getElementsByClassName('menu-4');                //Заголовок меню данных страхователя
 let driversElement = document.getElementsByClassName('driver');          //Элементы меню кол-ва водителей
-let middleNameCheck = document.getElementsByClassName('middle-name-check'); //ChekBox отчества
-let middleNameForm = document.getElementsByClassName('middle-name');    //input отчества
 
 
 navCloseButton[0].style.display = 'none';
-driverMenuInitializer();
+MenuInitializer();
 
 //Открытие и закрытие меню
 function navOpenFun() {
@@ -42,8 +40,6 @@ function checkedStatusInsuder() {
         insuder[0].style.display = 'block';
     }
 }
-
-
 
 //Переключатель меню водителей
 document.addEventListener("click", function (e) {
@@ -79,11 +75,14 @@ document.addEventListener("click", function (e) {
     }
 });
 
-function driverMenuInitializer() {
+function MenuInitializer() {
     let driversForm = document.getElementsByClassName('frame-driver');
+    let menuInsuder = document.getElementsByClassName('f4');
+
     for (let i = 0; i < driversForm.length; i++) {
         driversForm[i].style.display = 'none';
     }
+    menuInsuder[0].style.display = 'flex';
 }
 //Плавный скролинг
 jQuery(document).ready(function () {
@@ -102,12 +101,16 @@ $(document).ready(() => {
 
 
 function checkMiddleName() {
+    let middleNameCheck = document.getElementsByClassName('middle-name-check');
+    let middleNameForm = document.getElementsByClassName('middle-name');
     for (let i = 0; i <= middleNameCheck.length; i++)
         if (middleNameCheck[i].checked) {
+            middleNameForm[i].value = "Без отчества";
             middleNameForm[i].setAttribute("disabled", "true");
             middleNameForm[i].style.backgroundColor = ' #e7e7e7';
         }
         else {
+            middleNameForm[i].value = "";
             middleNameForm[i].removeAttribute("disabled");
             middleNameForm[i].style.backgroundColor = 'white';
 
@@ -133,6 +136,7 @@ function checkFormData() {
     let inputsForm = document.forms.formAction.getElementsByTagName('input');
     let selectForm = document.forms.formAction.getElementsByTagName('select');
 
+    //---------------------Инициализации-------------------------//
     for (let i; i < inputsForm.length; i++) {
         inputsForm[i].classList.remove('__error');
     }
@@ -140,16 +144,25 @@ function checkFormData() {
     for (let i; i < selectForm.length; i++) {
         selectForm[i].classList.remove('__error');
     }
-
+    //----Добавление класса __error если есть необходимость----//
     for (let i = 0; i < selectForm.length; i++) {
-        if (selectForm[i].value == 'Выберите из списка') {
+        if (selectForm[i].classList.contains('insuder')) {
+            if (selectForm[i].parentNode.parentNode.style.display == 'block') {
+                if (selectForm[i].value == 'Выберите из списка') {
+                    selectForm[i].classList.add('__error');
+                    errorForm = false;
+                }
+            }
+
+        }
+        else if (selectForm[i].value == 'Выберите из списка') {
             selectForm[i].classList.add('__error');
             errorForm = false;
         }
     }
 
     for (let i = 0; i < inputsForm.length; i++) {
-        if (inputsForm[i].classList.contains('driverInput')) {
+        if (inputsForm[i].classList.contains('driverInput') || inputsForm[i].classList.contains('insuder')) {
             if (inputsForm[i].parentNode.parentNode.style.display == 'flex' && inputsForm[i].value == '') {
                 inputsForm[i].classList.add('__error');
                 errorForm = false;
@@ -222,3 +235,10 @@ document.addEventListener('DOMContentLoaded', function () {
     //Скрыть уведомление о отправке данных
     $('.okButton').click(() => { hideWindowOk(); })
 })
+
+$(document).ready(function () {
+    $('.spoiler_links').click(function () {
+        $(this).parent().children('div.spoiler_body').toggle('normal');
+        return false;
+    });
+});
