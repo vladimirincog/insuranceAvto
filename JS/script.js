@@ -1,5 +1,4 @@
-
-"use strict";                                                           //ES6 для всего файла
+"use strict";                                                           //Строгий стиль
 
 let navItem = document.getElementsByClassName('item-nav');              //Элементы меню
 let navOpenButton = document.getElementsByClassName('navOpenButton');   //Стрелка открытия меню
@@ -8,13 +7,12 @@ let statusInsuder = document.getElementById('status-insuder');          //Cта�
 let menuInsuder = document.getElementsByClassName('f4');                //Меню данных страхователя
 let insuder = document.getElementsByClassName('menu-4');                //Заголовок меню данных страхователя
 let driversElement = document.getElementsByClassName('driver');          //Элементы меню кол-ва водителей
-let driversForm = document.getElementsByClassName('frame-driver');      //Форма ввода водятеля
 let middleNameCheck = document.getElementsByClassName('middle-name-check'); //ChekBox отчества
 let middleNameForm = document.getElementsByClassName('middle-name');    //input отчества
 
 
 navCloseButton[0].style.display = 'none';
-driversForm[0].style.display = 'flex';
+driverMenuInitializer();
 
 //Открытие и закрытие меню
 function navOpenFun() {
@@ -46,10 +44,12 @@ function checkedStatusInsuder() {
 }
 
 
+
+//Переключатель меню водителей
 document.addEventListener("click", function (e) {
     let TargetElement = e.target;
+    let driversForm = document.getElementsByClassName('frame-driver');
 
-    //Переключатель меню водителей
     if (e.target.className == 'driver' || e.target.className == 'driver start-driver' || e.target.className == 'driver end-driver') {
         TargetElement.style.backgroundColor = '#8abe5c';
         for (let i = 0; i < driversElement.length; i++) {
@@ -67,14 +67,24 @@ document.addEventListener("click", function (e) {
 
         else {
             for (let i = 0; i <= driversForm.length; i++) {
-                if (Number(TargetElement.textContent) - 1 >= i) { driversForm[i].style.display = 'flex'; }
-                else { driversForm[i].style.display = 'none'; }
+                if (Number(TargetElement.textContent) - 1 >= i) {
+                    driversForm[i].style.display = 'flex';
+                }
+                else {
+                    driversForm[i].style.display = 'none';
+                }
 
             }
         }
     }
 });
 
+function driverMenuInitializer() {
+    let driversForm = document.getElementsByClassName('frame-driver');
+    for (let i = 0; i < driversForm.length; i++) {
+        driversForm[i].style.display = 'none';
+    }
+}
 //Плавный скролинг
 jQuery(document).ready(function () {
     jQuery("a.scrollto").click(function () {
@@ -91,8 +101,7 @@ $(document).ready(() => {
 });
 
 
-//Проверка checkboxs-отчества
-function check() {
+function checkMiddleName() {
     for (let i = 0; i <= middleNameCheck.length; i++)
         if (middleNameCheck[i].checked) {
             middleNameForm[i].setAttribute("disabled", "true");
@@ -117,18 +126,52 @@ function hideWindowOk() {
     windowOk[0].style.display = 'none';
 }
 
-//Валидация формы
-function checkFormData() { return true; }
 
+//Возвращает true если проверка прошла успешно
+function checkFormData() {
+    let errorForm = true;
+    let inputsForm = document.forms.formAction.getElementsByTagName('input');
+    let selectForm = document.forms.formAction.getElementsByTagName('select');
 
-//Проверка телефонной формы на заполненность полей
+    for (let i; i < inputsForm.length; i++) {
+        inputsForm[i].classList.remove('__error');
+    }
+
+    for (let i; i < selectForm.length; i++) {
+        selectForm[i].classList.remove('__error');
+    }
+
+    for (let i = 0; i < selectForm.length; i++) {
+        if (selectForm[i].value == 'Выберите из списка') {
+            selectForm[i].classList.add('__error');
+            errorForm = false;
+        }
+    }
+
+    for (let i = 0; i < inputsForm.length; i++) {
+        if (inputsForm[i].classList.contains('driverInput')) {
+            if (inputsForm[i].parentNode.parentNode.style.display == 'flex' && inputsForm[i].value == '') {
+                inputsForm[i].classList.add('__error');
+                errorForm = false;
+            }
+        }
+        else if (inputsForm[i].value == '') {
+            inputsForm[i].classList.add('__error');
+            errorForm = false;
+        }
+    }
+
+    return errorForm;
+}
+
+//Возвращает true если проверка прошла успешно
 function checkFormPhone() {
     let errorForm = true;
     let elementsForm = document.getElementsByClassName('call-order');
     for (let i = 0; i < elementsForm.length; i++) {
-            elementsForm[i].classList.remove('__error');
-            errorForm = true;
-        }
+        elementsForm[i].classList.remove('__error');
+        errorForm = true;
+    }
     for (let i = 0; i < elementsForm.length; i++) {
         if (elementsForm[i].value == '') {
             elementsForm[i].classList.add('__error');
@@ -142,7 +185,7 @@ function checkFormPhone() {
 //Отправка данных на почту средствами AJAX и jQuery
 document.addEventListener('DOMContentLoaded', function () {
 
-    $('.form-action').submit(function () {
+    $('.buttonSendData').click(function () {
         if (checkFormData()) {
             $.post(
                 'http://localhost:8888/insuranceAvto/php/data-email.php',     // адрес обработчика 'http://localhost:8888/insuranceAvto/php/data-email.php'   https://insuranceavto.000webhostapp.com/
@@ -153,11 +196,13 @@ document.addEventListener('DOMContentLoaded', function () {
                 }
             );
             return false;                                                     //flase - не перезагружать страницу; true - перезагрузить страницу
-        }  
-        else{showWindowOk('Все поля должны быть заполнены');}                                                 
+        }
+        else {
+            showWindowOk('Все поля должны быть заполнены');
+        }
     });
 
-    $('.form-call-order').submit(function () {
+    $('.buttonSendPhone').click(function () {
         if (checkFormPhone()) {
             $.post(
                 'http://localhost:8888/insuranceAvto/php/phone-email.php',     // адрес обработчика  'http://localhost:8888/insuranceAvto/php/phone-email.php' https://insuranceavto.000webhostapp.com/
@@ -169,8 +214,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
             );
             return false;                                                       //flase - не перезагружать страницу; true - перезагрузить страницу
-       }     
-       else{showWindowOk('Все поля должны быть заполнены');}                                   
+        }
+        else {
+            showWindowOk('Все поля должны быть заполнены');
+        }
     });
     //Скрыть уведомление о отправке данных
     $('.okButton').click(() => { hideWindowOk(); })
