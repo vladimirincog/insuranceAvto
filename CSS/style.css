@@ -240,15 +240,17 @@ button {
 .f2,
 .f3,
 .f4,
-.f5,
-.frame-driver {
-  display: flex;
+.f5{
+  display: flex; 
   flex-flow: row wrap;
   justify-content: center;
   align-items: center;
 }
 .frame-driver {
   display: none;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
 }
 
 .f1 > h2,
@@ -274,6 +276,7 @@ h3 {
 }
 .f5-e > input {
   width: 300px;
+  display: block;
 }
 .number-driver {
   display: flex;
@@ -293,7 +296,7 @@ h3 {
 }
 .start-driver {
   border-radius: 10px 0px 0px 10px;
-  background: #8abe5c;
+  background: white;
 }
 .end-driver {
   border-radius: 0px 10px 10px 0px;
