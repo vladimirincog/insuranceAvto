@@ -99,7 +99,6 @@ $(document).ready(() => {
     $(".tel").mask("+7 (999) 999-99-99");
 });
 
-
 function checkMiddleName() {
     let middleNameCheck = document.getElementsByClassName('middle-name-check');
     let middleNameForm = document.getElementsByClassName('middle-name');
@@ -117,7 +116,6 @@ function checkMiddleName() {
         }
 }
 
-
 function showWindowOk(text) {
     let windowOk = document.getElementsByClassName('windowOk');
     let okText = document.getElementsByClassName('okText');
@@ -128,7 +126,6 @@ function hideWindowOk() {
     let windowOk = document.getElementsByClassName('windowOk');
     windowOk[0].style.display = 'none';
 }
-
 
 //Возвращает true если проверка прошла успешно
 function checkFormData() {
@@ -175,6 +172,15 @@ function checkFormData() {
     }
 
     return errorForm;
+}
+
+function cleanFormPhone(){
+    let elementsForm = document.getElementsByClassName('call-order');
+    for (let i = 0; i < elementsForm.length; i++) {
+        elementsForm[i].value = '';
+        elementsForm[i].classList.remove('__error');
+        errorForm = true;
+    }
 }
 
 //Возвращает true если проверка прошла успешно
