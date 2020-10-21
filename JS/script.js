@@ -8,15 +8,13 @@ let menuInsuder = document.getElementsByClassName('f4');                //Мен
 let insuder = document.getElementsByClassName('menu-4');                //Заголовок меню данных страхователя
 let driversElement = document.getElementsByClassName('driver');          //Элементы меню кол-ва водителей
 
-
-navCloseButton[0].style.display = 'none';
 MenuInitializer();
 
 //Открытие и закрытие меню
 function navOpenFun() {
     navCloseButton[0].style.display = 'block';
     navOpenButton[0].style.display = 'none';
-    for (let i = 0; i <= navItem.length; i++) {
+    for (let i = 0; i < navItem.length; i++) {
         navItem[i].style.display = 'block';
     }
 }
@@ -24,10 +22,11 @@ function navOpenFun() {
 function navCloseFun() {
     navCloseButton[0].style.display = 'none';
     navOpenButton[0].style.display = 'block';
-    for (let i = 0; i <= navItem.length; i++) {
+    for (let i = 0; i < navItem.length; i++) {
         navItem[i].style.display = 'none';
     }
 }
+
 //Страхователь = владелец ?
 function checkedStatusInsuder() {
     if (statusInsuder.checked === true) {
@@ -56,13 +55,13 @@ document.addEventListener("click", function (e) {
 
         if ("Не ограниченная" == TargetElement.textContent) {
 
-            for (let i = 0; i <= driversForm.length; i++) {
+            for (let i = 0; i < driversForm.length; i++) {
                 driversForm[i].style.display = 'none';
             }
         }
 
         else {
-            for (let i = 0; i <= driversForm.length; i++) {
+            for (let i = 0; i < driversForm.length; i++) {
                 if (Number(TargetElement.textContent) - 1 >= i) {
                     driversForm[i].style.display = 'flex';
                 }
@@ -75,15 +74,7 @@ document.addEventListener("click", function (e) {
     }
 });
 
-function MenuInitializer() {
-    let driversForm = document.getElementsByClassName('frame-driver');
-    let menuInsuder = document.getElementsByClassName('f4');
 
-    for (let i = 0; i < driversForm.length; i++) {
-        driversForm[i].style.display = 'none';
-    }
-    menuInsuder[0].style.display = 'flex';
-}
 //Плавный скролинг
 jQuery(document).ready(function () {
     jQuery("a.scrollto").click(function () {
@@ -116,17 +107,6 @@ function checkMiddleName() {
         }
 }
 
-function showWindowOk(text) {
-    let windowOk = document.getElementsByClassName('windowOk');
-    let okText = document.getElementsByClassName('okText');
-    okText[0].textContent = text;
-    windowOk[0].style.display = 'block';
-}
-function hideWindowOk() {
-    let windowOk = document.getElementsByClassName('windowOk');
-    windowOk[0].style.display = 'none';
-}
-
 //Возвращает true если проверка прошла успешно
 function checkFormData() {
     let errorForm = true;
@@ -141,7 +121,7 @@ function checkFormData() {
     for (let i; i < selectForm.length; i++) {
         selectForm[i].classList.remove('__error');
     }
-    //----Добавление класса __error если есть необходимость----//
+    //----Добавление класса __error если есть данные не введены----//
     for (let i = 0; i < selectForm.length; i++) {
         if (selectForm[i].classList.contains('insuder')) {
             if (selectForm[i].parentNode.parentNode.style.display == 'block') {
@@ -174,14 +154,6 @@ function checkFormData() {
     return errorForm;
 }
 
-function cleanFormPhone(){
-    let elementsForm = document.getElementsByClassName('call-order');
-    for (let i = 0; i < elementsForm.length; i++) {
-        elementsForm[i].value = '';
-        elementsForm[i].classList.remove('__error');
-        errorForm = true;
-    }
-}
 
 //Возвращает true если проверка прошла успешно
 function checkFormPhone() {
@@ -212,6 +184,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
                 function (msg) {                                              // получен ответ сервера  
                     showWindowOk('Мы расчитаем стоймость в течении 5 минут и перезвоним Вам');
+                    cleanFormData();
                 }
             );
             return false;                                                     //flase - не перезагружать страницу; true - перезагрузить страницу
@@ -229,6 +202,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
                 function (msg) {                                               // получен ответ сервера  
                     showWindowOk('Мы перезвоним Вам в течении 5 минут');
+                    cleanFormPhone();
                 }
 
             );
@@ -248,3 +222,51 @@ $(document).ready(function () {
         return false;
     });
 });
+
+function cleanFormPhone() {
+    let elementsForm = document.getElementsByClassName('call-order');
+    for (let i = 0; i < elementsForm.length; i++) {
+        elementsForm[i].value = '';
+        elementsForm[i].classList.remove('__error');
+    }
+}
+
+function cleanFormData() {
+    let inputsForm = document.forms.formAction.getElementsByTagName('input');
+    let selectForm = document.forms.formAction.getElementsByTagName('select');
+    for (let i = 0; i < inputsForm.length; i++) {
+        inputsForm[i].value = '';
+    }
+    for (let i = 0; i < selectForm.length; i++) {
+        selectForm[i].value = 'Выберите из списка';
+    }
+}
+
+function MenuInitializer() {
+    let driversForm = document.getElementsByClassName('frame-driver');
+    let menuInsuder = document.getElementsByClassName('f4');
+
+    for (let i = 0; i < driversForm.length; i++) {
+        driversForm[i].style.display = 'none';
+    }
+    menuInsuder[0].style.display = 'flex';
+
+    for(let i=0; i<navItem.length; i++){
+        navItem[i].addEventListener('click', () => {
+            if(navCloseButton[0].style.display == 'block'){
+                navCloseFun();
+            }
+        });
+    }
+}
+
+function showWindowOk(text) {
+    let windowOk = document.getElementsByClassName('windowOk');
+    let okText = document.getElementsByClassName('okText');
+    okText[0].textContent = text;
+    windowOk[0].style.display = 'block';
+}
+function hideWindowOk() {
+    let windowOk = document.getElementsByClassName('windowOk');
+    windowOk[0].style.display = 'none';
+}
